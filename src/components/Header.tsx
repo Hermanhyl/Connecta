@@ -1,0 +1,145 @@
+import { useEffect, useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { AnimatePresence, motion, useScroll, useMotionValueEvent } from 'framer-motion'
+import { Menu, X } from 'lucide-react'
+import { nav, site } from '../data/site'
+import { Logo } from './Logo'
+import { AnimatedButton } from './AnimatedButton'
+
+export function Header() {
+  const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
+  const { scrollY } = useScroll()
+  const location = useLocation()
+
+  useMotionValueEvent(scrollY, 'change', (y) => setScrolled(y > 24))
+
+  // Close mobile drawer on route change
+  useEffect(() => {
+    setOpen(false)
+  }, [location.pathname])
+
+  // Lock body scroll when the drawer is open
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
+
+  return (
+    <motion.header
+      className="fixed inset-x-0 top-0 z-50"
+      initial={{ y: -80 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <div
+        className={`relative z-50 mx-auto flex max-w-content items-center justify-between gap-4 px-5 transition-all duration-300 sm:px-8 ${
+          scrolled
+            ? 'my-2 rounded-full border border-clinic-line/80 bg-white/85 py-2.5 shadow-soft backdrop-blur-md'
+            : 'my-3 border border-transparent py-3.5'
+        }`}
+      >
+        <Link to="/" aria-label="Connecta forside" className="shrink-0">
+          <Logo />
+        </Link>
+
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Hovedmeny">
+          {nav.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === '/'}
+              className={({ isActive }) =>
+                `relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-200 ${
+                  isActive
+                    ? 'text-clinic-blue'
+                    : 'text-clinic-muted hover:text-clinic-blueDark'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  {item.label}
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-clinic-gold"
+                    />
+                  )}
+                </>
+              )}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="hidden lg:block">
+          <AnimatedButton to="/kontakt">Bestill time</AnimatedButton>
+        </div>
+
+        <button
+          type="button"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full text-clinic-blueDark transition-colors hover:bg-clinic-surface lg:hidden"
+          aria-label={open ? 'Lukk meny' : 'Åpne meny'}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile drawer */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="fixed inset-0 top-0 z-40 lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div
+              className="absolute inset-0 bg-clinic-ink/30 backdrop-blur-sm"
+              onClick={() => setOpen(false)}
+            />
+            <motion.div
+              className="absolute right-0 top-0 flex h-full w-[82%] max-w-sm flex-col gap-1 bg-white p-6 pt-24 shadow-lift"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', stiffness: 300, damping: 32 }}
+            >
+              {nav.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.to === '/'}
+                  className={({ isActive }) =>
+                    `rounded-xl px-4 py-3 text-lg font-medium transition-colors ${
+                      isActive
+                        ? 'bg-clinic-surface text-clinic-blue'
+                        : 'text-clinic-ink hover:bg-clinic-surface'
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+              <div className="mt-4">
+                <AnimatedButton to="/kontakt" className="w-full">
+                  Bestill time
+                </AnimatedButton>
+              </div>
+              <a
+                href={`tel:${site.phone.replace(/\s/g, '')}`}
+                className="mt-4 text-center text-sm text-clinic-muted"
+              >
+                Telefon: {site.phone}
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
+  )
+}

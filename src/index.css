@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-clinic-bg font-body text-clinic-ink antialiased;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading text-clinic-ink;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    @apply bg-clinic-teal/30;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .prose-clinic p {
+    @apply mb-5 leading-[1.75] text-clinic-muted;
+    max-width: 68ch;
+  }
+
+  .prose-clinic h2 {
+    @apply mb-4 mt-10 text-2xl font-semibold text-clinic-ink;
+  }
+
+  .prose-clinic h3 {
+    @apply mb-3 mt-8 text-xl font-semibold text-clinic-ink;
+  }
+
+  .prose-clinic ul {
+    @apply mb-5 list-disc space-y-2 pl-5 text-clinic-muted;
+  }
+
+  .prose-clinic strong {
+    @apply font-semibold text-clinic-ink;
+  }
+
+  /* Rich, metallic gold CTA button with a glossy shine sweep on hover. */
+  .btn-gold {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background-image: linear-gradient(110deg, #f4cf6b 0%, #e3b24a 42%, #cf9a37 100%);
+    box-shadow:
+      0 6px 18px rgba(193, 142, 49, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    transition:
+      box-shadow 0.3s ease,
+      filter 0.3s ease;
+  }
+
+  .btn-gold::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      110deg,
+      transparent 33%,
+      rgba(255, 255, 255, 0.65) 50%,
+      transparent 67%
+    );
+    transform: translateX(-135%);
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-gold:hover {
+    filter: brightness(1.05) saturate(1.08);
+    box-shadow:
+      0 14px 36px rgba(208, 160, 60, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .btn-gold:hover::before {
+    transform: translateX(135%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
