@@ -24,7 +24,7 @@ export function CbtTriad({ caption, note, nodes }: Props) {
     >
       <motion.p
         variants={fadeUp}
-        className="mb-6 text-center text-sm font-semibold uppercase tracking-[0.18em] text-clinic-teal"
+        className="mb-6 text-center text-sm font-semibold uppercase tracking-[0.18em] text-clinic-tealText"
       >
         {caption}
       </motion.p>

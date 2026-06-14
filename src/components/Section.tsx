@@ -58,7 +58,7 @@ export function SectionHeading({
   return (
     <Reveal className={`text-center ${className}`}>
       {eyebrow && (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-clinic-teal">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-clinic-tealText">
           {eyebrow}
         </p>
       )}

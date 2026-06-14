@@ -63,7 +63,7 @@ export function BlogPost() {
               <ArrowLeft size={16} />
               Tilbake til bloggen
             </Link>
-            <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm font-medium text-clinic-teal">
+            <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm font-medium text-clinic-tealText">
               <span className="inline-flex items-center gap-1.5">
                 <CalendarDays size={15} />
                 {post.date}
@@ -100,7 +100,7 @@ export function BlogPost() {
                     href={`#${h.id}`}
                     className="flex gap-3 text-clinic-muted transition-colors hover:text-clinic-blue"
                   >
-                    <span className="font-heading font-semibold text-clinic-teal">
+                    <span className="font-heading font-semibold text-clinic-tealText">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <span>{h.text}</span>

@@ -11,6 +11,7 @@ export default {
           blue: '#3E6E8E',
           blueDark: '#2B4F66',
           teal: '#7FB6AE',
+          tealText: '#357568', // darker teal for text (WCAG AA ~5.2:1 on light bg)
           sage: '#A8C8BE',
           gold: '#C8A35B',
           ink: '#243B45',

@@ -68,9 +68,15 @@ export function ContactForm() {
           className={field}
           value={values.navn}
           onChange={(e) => setValues({ ...values, navn: e.target.value })}
+          aria-required="true"
           aria-invalid={!!errors.navn}
+          aria-describedby={errors.navn ? 'navn-error' : undefined}
         />
-        {errors.navn && <p className="mt-1.5 text-sm text-red-600">{errors.navn}</p>}
+        {errors.navn && (
+          <p id="navn-error" role="alert" className="mt-1.5 text-sm text-red-600">
+            {errors.navn}
+          </p>
+        )}
       </div>
 
       <div>
@@ -83,9 +89,15 @@ export function ContactForm() {
           className={field}
           value={values.email}
           onChange={(e) => setValues({ ...values, email: e.target.value })}
+          aria-required="true"
           aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? 'email-error' : undefined}
         />
-        {errors.email && <p className="mt-1.5 text-sm text-red-600">{errors.email}</p>}
+        {errors.email && (
+          <p id="email-error" role="alert" className="mt-1.5 text-sm text-red-600">
+            {errors.email}
+          </p>
+        )}
       </div>
 
       <div>
@@ -98,9 +110,15 @@ export function ContactForm() {
           className={`${field} resize-y`}
           value={values.melding}
           onChange={(e) => setValues({ ...values, melding: e.target.value })}
+          aria-required="true"
           aria-invalid={!!errors.melding}
+          aria-describedby={errors.melding ? 'melding-error' : undefined}
         />
-        {errors.melding && <p className="mt-1.5 text-sm text-red-600">{errors.melding}</p>}
+        {errors.melding && (
+          <p id="melding-error" role="alert" className="mt-1.5 text-sm text-red-600">
+            {errors.melding}
+          </p>
+        )}
       </div>
 
       <motion.button

@@ -39,7 +39,7 @@ export function PageHeading({
   return (
     <div className="mx-auto max-w-2xl text-center">
       {eyebrow && (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-clinic-teal">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-clinic-tealText">
           {eyebrow}
         </p>
       )}
