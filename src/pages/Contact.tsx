@@ -1,12 +1,14 @@
 import { Mail, Phone, Clock } from 'lucide-react'
-import { contact, site } from '../data/site'
+import { contact, site, seo } from '../data/site'
 import { Section, Reveal } from '../components/Section'
 import { PageHero } from '../components/Decor'
 import { ContactForm } from '../components/ContactForm'
+import { Seo } from '../components/Seo'
 
 export function Contact() {
   return (
     <>
+      <Seo title={seo['/kontakt'].title} description={seo['/kontakt'].description} path="/kontakt" />
       <PageHero eyebrow="Kontakt" title="Ta kontakt" lead={contact.blurb} />
 
       <Section className="container-content py-14">

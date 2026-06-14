@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, CalendarDays } from 'lucide-react'
-import { posts } from '../data/site'
+import { posts, seo } from '../data/site'
 import { Section, Reveal } from '../components/Section'
 import { PageHero } from '../components/Decor'
+import { Seo } from '../components/Seo'
 
 export function Blog() {
   return (
     <>
+      <Seo title={seo['/blogg'].title} description={seo['/blogg'].description} path="/blogg" />
       <PageHero
         eyebrow="Blogg"
         title="Blogginnlegg"

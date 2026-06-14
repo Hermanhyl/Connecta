@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion'
 import { Mail, Languages } from 'lucide-react'
-import { team } from '../data/site'
+import { team, seo } from '../data/site'
 import { Section, Reveal } from '../components/Section'
 import { PageHero } from '../components/Decor'
 import { CallToAction } from '../components/CallToAction'
+import { Seo } from '../components/Seo'
 
 export function About() {
   return (
     <>
+      <Seo title={seo['/om-oss'].title} description={seo['/om-oss'].description} path="/om-oss" />
       <PageHero
         eyebrow="Om oss"
         title="Terapeutene"

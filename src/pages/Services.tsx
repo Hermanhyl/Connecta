@@ -1,15 +1,17 @@
 import { Check, HeartHandshake, Users } from 'lucide-react'
-import { services } from '../data/site'
+import { services, seo } from '../data/site'
 import { Section, Reveal } from '../components/Section'
 import { PageHero } from '../components/Decor'
 import { ServiceGroupTabs } from '../components/ServiceGroupTabs'
 import { CallToAction } from '../components/CallToAction'
+import { Seo } from '../components/Seo'
 
 const topicIcons = [HeartHandshake, Users]
 
 export function Services() {
   return (
     <>
+      <Seo title={seo['/tjenester'].title} description={seo['/tjenester'].description} path="/tjenester" />
       <PageHero
         eyebrow="Tjenester"
         title="Våre tjenester"

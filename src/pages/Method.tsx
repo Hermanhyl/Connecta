@@ -1,15 +1,21 @@
 import { motion } from 'framer-motion'
 import { Check, Quote } from 'lucide-react'
-import { method } from '../data/site'
+import { method, seo } from '../data/site'
 import { Section, Reveal } from '../components/Section'
 import { PageHero } from '../components/Decor'
 import { CbtTriad } from '../components/CbtTriad'
 import { CallToAction } from '../components/CallToAction'
+import { Seo } from '../components/Seo'
 import { fadeUp } from '../lib/motion'
 
 export function Method() {
   return (
     <>
+      <Seo
+        title={seo['/behandlingsmetode'].title}
+        description={seo['/behandlingsmetode'].description}
+        path="/behandlingsmetode"
+      />
       <PageHero eyebrow="Behandlingsmetode" title="Kognitiv atferdsterapi" lead={method.lead} />
 
       {/* Kort fortalt — quick takeaways */}

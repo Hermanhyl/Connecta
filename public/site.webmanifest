@@ -1,0 +1,12 @@
+{
+  "name": "Connecta – Terapi og veiledning online",
+  "short_name": "Connecta",
+  "description": "Terapi og veiledning online: individualterapi, kognitiv atferdsterapi og familieveiledning.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBFCFD",
+  "theme_color": "#2B4F66",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" }
+  ]
+}

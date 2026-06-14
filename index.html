@@ -3,21 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2B4F66" />
+    <meta name="color-scheme" content="light" />
+
+    <title>Connecta – Terapi og veiledning online</title>
     <meta
       name="description"
       content="Connecta tilbyr terapi og veiledning online. Kognitiv atferdsterapi, individualterapi og familieveiledning med erfarne terapeuter."
     />
-    <title>Connecta – Terapi og veiledning online</title>
+
+    <!-- Open Graph / social (site-level defaults; per-page values set at runtime) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Connecta" />
+    <meta property="og:locale" content="nb_NO" />
+    <meta property="og:title" content="Connecta – Terapi og veiledning online" />
+    <meta
+      property="og:description"
+      content="Terapi og veiledning online. Kognitiv atferdsterapi, individualterapi og familieveiledning med erfarne terapeuter."
+    />
+    <meta property="og:url" content="https://connecta.no" />
+    <meta name="twitter:card" content="summary" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Structured data: therapy practice -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Connecta",
+        "description": "Terapi og veiledning online: individualterapi, kognitiv atferdsterapi og familieveiledning.",
+        "url": "https://connecta.no",
+        "telephone": "+4792250863",
+        "email": "kjersti@connecta.no",
+        "image": "https://connecta.no/favicon.svg",
+        "priceRange": "$$",
+        "areaServed": "NO",
+        "availableLanguage": ["no", "en", "es"],
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Thursday"], "opens": "09:00", "closes": "19:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Friday"], "opens": "09:00", "closes": "17:00" }
+        ]
+      }
+    </script>
+
+    <style>
+      /* Initial loading state shown before the app's JS mounts. */
+      .app-loading {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        background: #fbfcfd;
+      }
+      .app-spinner {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 3px solid #e3ebef;
+        border-top-color: #3e6e8e;
+        animation: app-spin 0.8s linear infinite;
+      }
+      @keyframes app-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .app-spinner {
+          animation-duration: 1.6s;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="app-loading" aria-hidden="true">
+        <div class="app-spinner"></div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

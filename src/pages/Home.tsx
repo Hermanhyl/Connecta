@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, ShieldCheck, Globe, HeartHandshake } from 'lucide-react'
-import { home, serviceTeasers, testimonials, faq } from '../data/site'
+import { home, serviceTeasers, testimonials, faq, seo } from '../data/site'
+import { Seo } from '../components/Seo'
 import { Section, Reveal, SectionHeading } from '../components/Section'
 import { Blobs } from '../components/Decor'
 import { AnimatedButton } from '../components/AnimatedButton'
@@ -22,6 +23,7 @@ const highlights = [
 export function Home() {
   return (
     <>
+      <Seo title={seo['/'].title} description={seo['/'].description} path="/" />
       {/* Hero */}
       <section className="relative overflow-hidden">
         <Blobs />

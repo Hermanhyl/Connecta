@@ -9,6 +9,50 @@ export const site = {
     kjersti: 'kjersti@connecta.no',
     amalie: 'amalie@connecta.no',
   },
+  // Canonical site URL — used for canonical tags, Open Graph and the sitemap.
+  // TODO: confirm when the domain is connected (assumed connecta.no).
+  url: 'https://connecta.no',
+}
+
+// Per-route SEO copy. Keep titles ~50–60 chars and descriptions ~150–160.
+export type SeoMeta = { title: string; description: string }
+
+export const seo: Record<string, SeoMeta> = {
+  '/': {
+    title: 'Connecta – Terapi og veiledning online',
+    description:
+      'Connecta tilbyr terapi og veiledning online: individualterapi, kognitiv atferdsterapi og familieveiledning med erfarne terapeuter. Ta kontakt i dag.',
+  },
+  '/om-oss': {
+    title: 'Om oss – Terapeutene hos Connecta',
+    description:
+      'Møt terapeutene Kjersti og Amalie Hylland. Lang erfaring som terapeut og veileder i offentlig og privat sektor – online terapi for hele landet.',
+  },
+  '/tjenester': {
+    title: 'Tjenester – Individualterapi, online & familieveiledning',
+    description:
+      'Våre tjenester: individualterapi, onlineterapi og familieveiledning. Hos oss kan du få hjelp til å finne løsninger, alene eller sammen med andre.',
+  },
+  '/behandlingsmetode': {
+    title: 'Behandlingsmetode – Kognitiv atferdsterapi | Connecta',
+    description:
+      'Vi tilbyr kognitiv atferdsterapi (KAT) – en godt dokumentert metode som ser på samspillet mellom tanker, følelser og handlinger for varig endring.',
+  },
+  '/priser': {
+    title: 'Priser – Terapi og veiledning | Connecta',
+    description:
+      'Oversikt over priser for individualterapi, familieveiledning og terapipakker hos Connecta. Se hva som passer for deg.',
+  },
+  '/blogg': {
+    title: 'Blogg – Psykisk helse, språk og terapi | Connecta',
+    description:
+      'Tanker og refleksjoner om psykisk helse, språk og terapi fra terapeutene hos Connecta.',
+  },
+  '/kontakt': {
+    title: 'Kontakt – Bestill time hos Connecta',
+    description:
+      'Ta kontakt med Connecta for terapi og veiledning online. Se åpningstider, telefon og e-post, eller send oss en melding via kontaktskjemaet.',
+  },
 }
 
 export type NavItem = { label: string; to: string }

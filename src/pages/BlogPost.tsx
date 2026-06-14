@@ -1,9 +1,10 @@
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft, CalendarDays, Clock, List } from 'lucide-react'
-import { posts } from '../data/site'
+import { posts, site } from '../data/site'
 import { Section, Reveal } from '../components/Section'
 import { Blobs } from '../components/Decor'
 import { AnimatedButton } from '../components/AnimatedButton'
+import { Seo } from '../components/Seo'
 
 /** Build a URL-safe id from a Norwegian heading for in-page anchors. */
 function slugify(s: string): string {
@@ -46,6 +47,11 @@ export function BlogPost() {
 
   return (
     <>
+      <Seo
+        title={`${post.title} – ${site.name}`}
+        description={post.excerpt}
+        path={`/blogg/${post.slug}`}
+      />
       <section className="relative overflow-hidden pb-4">
         <Blobs />
         <div className="container-content pt-4">

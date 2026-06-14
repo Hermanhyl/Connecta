@@ -1,12 +1,14 @@
 import { Info } from 'lucide-react'
-import { pricing } from '../data/site'
+import { pricing, seo } from '../data/site'
 import { Section, Reveal } from '../components/Section'
 import { PageHero } from '../components/Decor'
 import { CallToAction } from '../components/CallToAction'
+import { Seo } from '../components/Seo'
 
 export function Pricing() {
   return (
     <>
+      <Seo title={seo['/priser'].title} description={seo['/priser'].description} path="/priser" />
       <PageHero
         eyebrow="Priser"
         title="Priser"
