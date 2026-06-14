@@ -69,7 +69,7 @@ export function Footer() {
 
       <div className="border-t border-clinic-line">
         <div className="container-content flex flex-col items-center justify-between gap-2 py-6 text-xs text-clinic-muted sm:flex-row">
-          <p>© {new Date().getFullYear()} {site.name}. Alle rettigheter reservert.</p>
+          <p>© {new Date().getFullYear()} {site.name}. Med enerett.</p>
           <p>Terapi og veiledning online</p>
         </div>
       </div>
