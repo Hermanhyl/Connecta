@@ -10,8 +10,8 @@ export const site = {
     amalie: 'amalie@connecta.no',
   },
   // Canonical site URL — used for canonical tags, Open Graph and the sitemap.
-  // TODO: confirm when the domain is connected (assumed connecta.no).
-  url: 'https://connecta.no',
+  // TEMPORARY: Netlify preview URL until the real domain (connecta.no) is connected.
+  url: 'https://connecta-preview.netlify.app',
 }
 
 // Per-route SEO copy. Keep titles ~50–60 chars and descriptions ~150–160.

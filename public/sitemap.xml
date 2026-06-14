@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://connecta.no/</loc><priority>1.0</priority></url>
-  <url><loc>https://connecta.no/om-oss</loc><priority>0.8</priority></url>
-  <url><loc>https://connecta.no/tjenester</loc><priority>0.8</priority></url>
-  <url><loc>https://connecta.no/behandlingsmetode</loc><priority>0.8</priority></url>
-  <url><loc>https://connecta.no/priser</loc><priority>0.7</priority></url>
-  <url><loc>https://connecta.no/blogg</loc><priority>0.6</priority></url>
-  <url><loc>https://connecta.no/blogg/sprakets-makt</loc><priority>0.5</priority></url>
-  <url><loc>https://connecta.no/blogg/diagnostiske-begrep-i-den-digitale-verden</loc><priority>0.5</priority></url>
-  <url><loc>https://connecta.no/kontakt</loc><priority>0.7</priority></url>
+  <url><loc>https://connecta-preview.netlify.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://connecta-preview.netlify.app/om-oss</loc><priority>0.8</priority></url>
+  <url><loc>https://connecta-preview.netlify.app/tjenester</loc><priority>0.8</priority></url>
+  <url><loc>https://connecta-preview.netlify.app/behandlingsmetode</loc><priority>0.8</priority></url>
+  <url><loc>https://connecta-preview.netlify.app/priser</loc><priority>0.7</priority></url>
+  <url><loc>https://connecta-preview.netlify.app/blogg</loc><priority>0.6</priority></url>
+  <url><loc>https://connecta-preview.netlify.app/blogg/sprakets-makt</loc><priority>0.5</priority></url>
+  <url><loc>https://connecta-preview.netlify.app/blogg/diagnostiske-begrep-i-den-digitale-verden</loc><priority>0.5</priority></url>
+  <url><loc>https://connecta-preview.netlify.app/kontakt</loc><priority>0.7</priority></url>
 </urlset>
