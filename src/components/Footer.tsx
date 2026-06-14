@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Mail, Phone, Clock } from 'lucide-react'
+import { Mail, Phone, Clock, Code2, ArrowUpRight } from 'lucide-react'
 import { nav, site, contact } from '../data/site'
 import { Logo } from './Logo'
 
@@ -68,9 +68,29 @@ export function Footer() {
       </div>
 
       <div className="border-t border-clinic-line">
-        <div className="container-content flex flex-col items-center justify-between gap-2 py-6 text-xs text-clinic-muted sm:flex-row">
+        <div className="container-content flex flex-col items-center justify-between gap-3 py-6 text-xs text-clinic-muted sm:flex-row">
           <p>© {new Date().getFullYear()} {site.name}. Med enerett.</p>
-          <p>Terapi og veiledning online</p>
+          {/* Developer credit — TEMPORARY URL, swap when the real domain is ready */}
+          <a
+            href="https://hyllanddesignogutvikling.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Utbedret av Hylland Design & Utvikling (åpnes i ny fane)"
+            className="group inline-flex items-center gap-2 rounded-full border border-clinic-line bg-white px-3.5 py-1.5 text-clinic-muted shadow-soft transition-colors hover:border-clinic-blue hover:text-clinic-blue"
+          >
+            <Code2 size={14} className="text-clinic-teal" aria-hidden="true" />
+            <span>
+              Utbedret av{' '}
+              <span className="font-semibold text-clinic-blueDark transition-colors group-hover:text-clinic-blue">
+                Hylland Design &amp; Utvikling
+              </span>
+            </span>
+            <ArrowUpRight
+              size={13}
+              aria-hidden="true"
+              className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            />
+          </a>
         </div>
       </div>
     </footer>
