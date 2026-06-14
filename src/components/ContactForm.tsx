@@ -59,15 +59,16 @@ export function ContactForm() {
       className="space-y-5 rounded-3xl border border-clinic-line bg-white p-6 shadow-soft sm:p-8"
     >
       <p className="text-sm text-clinic-muted">
-        Felt merket med <span className="text-red-600">*</span> er påkrevd.
+        Felt merket med <span className="text-base font-bold text-red-600">*</span> er påkrevd.
       </p>
       <div>
         <label htmlFor="navn" className="mb-1.5 block text-sm font-medium text-clinic-ink">
-          Navn <span className="text-red-600" aria-hidden="true">*</span>
+          Navn <span className="align-middle text-lg font-bold leading-none text-red-600" aria-hidden="true">*</span>
         </label>
         <input
           id="navn"
           type="text"
+          placeholder="Ola Nordmann"
           className={field}
           value={values.navn}
           onChange={(e) => setValues({ ...values, navn: e.target.value })}
@@ -84,11 +85,12 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-clinic-ink">
-          E-post <span className="text-red-600" aria-hidden="true">*</span>
+          E-post <span className="align-middle text-lg font-bold leading-none text-red-600" aria-hidden="true">*</span>
         </label>
         <input
           id="email"
           type="email"
+          placeholder="navn@epost.no"
           className={field}
           value={values.email}
           onChange={(e) => setValues({ ...values, email: e.target.value })}
@@ -105,11 +107,12 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="melding" className="mb-1.5 block text-sm font-medium text-clinic-ink">
-          Melding <span className="text-red-600" aria-hidden="true">*</span>
+          Melding <span className="align-middle text-lg font-bold leading-none text-red-600" aria-hidden="true">*</span>
         </label>
         <textarea
           id="melding"
           rows={5}
+          placeholder="Skriv noen ord om hva du ønsker hjelp med …"
           className={`${field} resize-y`}
           value={values.melding}
           onChange={(e) => setValues({ ...values, melding: e.target.value })}
