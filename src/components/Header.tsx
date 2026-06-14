@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion, useScroll, useMotionValueEvent } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
@@ -11,6 +11,9 @@ export function Header() {
   const [open, setOpen] = useState(false)
   const { scrollY } = useScroll()
   const location = useLocation()
+  const menuBtnRef = useRef<HTMLButtonElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
+  const wasOpen = useRef(false)
 
   useMotionValueEvent(scrollY, 'change', (y) => setScrolled(y > 24))
 
@@ -25,6 +28,45 @@ export function Header() {
     return () => {
       document.body.style.overflow = ''
     }
+  }, [open])
+
+  // Drawer keyboard handling: focus first item, Escape to close, trap Tab inside.
+  useEffect(() => {
+    if (!open) return
+    const panel = panelRef.current
+    const focusables = () =>
+      Array.from(
+        panel?.querySelectorAll<HTMLElement>('a[href], button:not([disabled])') ?? [],
+      )
+    focusables()[0]?.focus()
+
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        setOpen(false)
+        return
+      }
+      if (e.key === 'Tab') {
+        const f = focusables()
+        if (f.length === 0) return
+        const first = f[0]
+        const last = f[f.length - 1]
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [open])
+
+  // Return focus to the menu button after the drawer closes.
+  useEffect(() => {
+    if (wasOpen.current && !open) menuBtnRef.current?.focus()
+    wasOpen.current = open
   }, [open])
 
   return (
@@ -79,13 +121,15 @@ export function Header() {
         </div>
 
         <button
+          ref={menuBtnRef}
           type="button"
           className="inline-flex h-11 w-11 items-center justify-center rounded-full text-clinic-blueDark transition-colors hover:bg-clinic-surface lg:hidden"
           aria-label={open ? 'Lukk meny' : 'Åpne meny'}
           aria-expanded={open}
+          aria-haspopup="dialog"
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
       </div>
 
@@ -101,8 +145,13 @@ export function Header() {
             <div
               className="absolute inset-0 bg-clinic-ink/30 backdrop-blur-sm"
               onClick={() => setOpen(false)}
+              aria-hidden="true"
             />
             <motion.div
+              ref={panelRef}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Meny"
               className="absolute right-0 top-0 flex h-full w-[82%] max-w-sm flex-col gap-1 bg-white p-6 pt-24 shadow-lift"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
