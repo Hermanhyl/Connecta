@@ -1,18 +1,13 @@
 import { Mail, Phone, Clock } from 'lucide-react'
 import { contact, site } from '../data/site'
 import { Section, Reveal } from '../components/Section'
-import { Blobs, PageHeading } from '../components/Decor'
+import { PageHero } from '../components/Decor'
 import { ContactForm } from '../components/ContactForm'
 
 export function Contact() {
   return (
     <>
-      <section className="relative overflow-hidden pb-6">
-        <Blobs />
-        <div className="container-content pt-6">
-          <PageHeading eyebrow="Kontakt" title="Ta kontakt" lead={contact.blurb} />
-        </div>
-      </section>
+      <PageHero eyebrow="Kontakt" title="Ta kontakt" lead={contact.blurb} />
 
       <Section className="container-content py-14">
         <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_1.2fr]">

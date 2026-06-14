@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Check, Quote } from 'lucide-react'
 import { method } from '../data/site'
 import { Section, Reveal } from '../components/Section'
-import { Blobs, PageHeading } from '../components/Decor'
+import { PageHero } from '../components/Decor'
 import { CbtTriad } from '../components/CbtTriad'
 import { CallToAction } from '../components/CallToAction'
 import { fadeUp } from '../lib/motion'
@@ -10,12 +10,7 @@ import { fadeUp } from '../lib/motion'
 export function Method() {
   return (
     <>
-      <section className="relative overflow-hidden pb-6">
-        <Blobs />
-        <div className="container-content pt-6">
-          <PageHeading eyebrow="Behandlingsmetode" title="Kognitiv atferdsterapi" lead={method.lead} />
-        </div>
-      </section>
+      <PageHero eyebrow="Behandlingsmetode" title="Kognitiv atferdsterapi" lead={method.lead} />
 
       {/* Kort fortalt — quick takeaways */}
       <Section className="container-content py-10">

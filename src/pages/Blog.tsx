@@ -3,21 +3,16 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, CalendarDays } from 'lucide-react'
 import { posts } from '../data/site'
 import { Section, Reveal } from '../components/Section'
-import { Blobs, PageHeading } from '../components/Decor'
+import { PageHero } from '../components/Decor'
 
 export function Blog() {
   return (
     <>
-      <section className="relative overflow-hidden pb-6">
-        <Blobs />
-        <div className="container-content pt-6">
-          <PageHeading
-            eyebrow="Blogg"
-            title="Blogginnlegg"
-            lead="Tanker og refleksjoner om psykisk helse, språk og terapi."
-          />
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Blogg"
+        title="Blogginnlegg"
+        lead="Tanker og refleksjoner om psykisk helse, språk og terapi."
+      />
 
       <Section className="container-content py-14">
         <div className="mx-auto grid max-w-4xl gap-7 md:grid-cols-2">

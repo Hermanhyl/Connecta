@@ -1,7 +1,7 @@
 import { Check, HeartHandshake, Users } from 'lucide-react'
 import { services } from '../data/site'
 import { Section, Reveal } from '../components/Section'
-import { Blobs, PageHeading } from '../components/Decor'
+import { PageHero } from '../components/Decor'
 import { ServiceGroupTabs } from '../components/ServiceGroupTabs'
 import { CallToAction } from '../components/CallToAction'
 
@@ -10,16 +10,11 @@ const topicIcons = [HeartHandshake, Users]
 export function Services() {
   return (
     <>
-      <section className="relative overflow-hidden pb-6">
-        <Blobs />
-        <div className="container-content pt-6">
-          <PageHeading
-            eyebrow="Tjenester"
-            title="Våre tjenester"
-            lead="Hos oss kan du få hjelp til å finne løsninger, enten alene eller sammen med andre."
-          />
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Tjenester"
+        title="Våre tjenester"
+        lead="Hos oss kan du få hjelp til å finne løsninger, enten alene eller sammen med andre."
+      />
 
       <Section className="container-content py-14">
         <div className="mx-auto max-w-3xl space-y-8">

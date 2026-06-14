@@ -38,3 +38,32 @@ export function Reveal({
     </motion.div>
   )
 }
+
+/**
+ * Centered section header (eyebrow + title + optional lead).
+ * Use inside a <Section> so it reveals on scroll. Keeps the repeated
+ * eyebrow/heading markup in one place (DRY).
+ */
+export function SectionHeading({
+  eyebrow,
+  title,
+  lead,
+  className = 'mb-12',
+}: {
+  eyebrow?: string
+  title: string
+  lead?: string
+  className?: string
+}) {
+  return (
+    <Reveal className={`text-center ${className}`}>
+      {eyebrow && (
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-clinic-teal">
+          {eyebrow}
+        </p>
+      )}
+      <h2 className="text-3xl font-semibold sm:text-4xl">{title}</h2>
+      {lead && <p className="mx-auto mt-4 max-w-xl text-clinic-muted">{lead}</p>}
+    </Reveal>
+  )
+}

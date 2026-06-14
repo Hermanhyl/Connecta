@@ -48,3 +48,26 @@ export function PageHeading({
     </div>
   )
 }
+
+/**
+ * Standard top-of-page hero: decorative blobs + centered PageHeading.
+ * Shared by every inner page so the markup lives in one place (DRY).
+ */
+export function PageHero({
+  eyebrow,
+  title,
+  lead,
+}: {
+  eyebrow?: string
+  title: string
+  lead?: string
+}) {
+  return (
+    <section className="relative overflow-hidden pb-6">
+      <Blobs />
+      <div className="container-content pt-6">
+        <PageHeading eyebrow={eyebrow} title={title} lead={lead} />
+      </div>
+    </section>
+  )
+}

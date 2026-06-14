@@ -2,22 +2,17 @@ import { motion } from 'framer-motion'
 import { Mail, Languages } from 'lucide-react'
 import { team } from '../data/site'
 import { Section, Reveal } from '../components/Section'
-import { Blobs, PageHeading } from '../components/Decor'
+import { PageHero } from '../components/Decor'
 import { CallToAction } from '../components/CallToAction'
 
 export function About() {
   return (
     <>
-      <section className="relative overflow-hidden pb-6">
-        <Blobs />
-        <div className="container-content pt-6">
-          <PageHeading
-            eyebrow="Om oss"
-            title="Terapeutene"
-            lead="Vi har lang erfaring som terapeut og veileder i offentlig og privat sektor, og bistår gjerne med terapi for enkeltpersoner, familier, par og bedrifter."
-          />
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Om oss"
+        title="Terapeutene"
+        lead="Vi har lang erfaring som terapeut og veileder i offentlig og privat sektor, og bistår gjerne med terapi for enkeltpersoner, familier, par og bedrifter."
+      />
 
       <Section className="container-content py-14">
         <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, ShieldCheck, Globe, HeartHandshake } from 'lucide-react'
 import { home, serviceTeasers, testimonials, faq } from '../data/site'
-import { Section, Reveal } from '../components/Section'
+import { Section, Reveal, SectionHeading } from '../components/Section'
 import { Blobs } from '../components/Decor'
 import { AnimatedButton } from '../components/AnimatedButton'
 import { ServiceIcon } from '../components/ServiceIcon'
@@ -92,12 +92,7 @@ export function Home() {
 
       {/* Services */}
       <Section className="container-content py-16">
-        <Reveal className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-clinic-teal">
-            Tjenester
-          </p>
-          <h2 className="text-3xl font-semibold sm:text-4xl">Hvordan vi kan hjelpe deg</h2>
-        </Reveal>
+        <SectionHeading eyebrow="Tjenester" title="Hvordan vi kan hjelpe deg" />
 
         <div className="grid gap-6 md:grid-cols-3">
           {serviceTeasers.map((s) => (
@@ -146,12 +141,7 @@ export function Home() {
 
       {/* Testimonials */}
       <Section className="container-content py-16">
-        <Reveal className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-clinic-teal">
-            Hva sier andre om oss?
-          </p>
-          <h2 className="text-3xl font-semibold sm:text-4xl">Ord fra dem vi har hjulpet</h2>
-        </Reveal>
+        <SectionHeading eyebrow="Hva sier andre om oss?" title="Ord fra dem vi har hjulpet" />
         <Reveal>
           <TestimonialCarousel items={testimonials} />
         </Reveal>
@@ -159,15 +149,11 @@ export function Home() {
 
       {/* FAQ */}
       <Section className="container-content py-16">
-        <Reveal className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-clinic-teal">
-            Ofte stilte spørsmål
-          </p>
-          <h2 className="text-3xl font-semibold sm:text-4xl">Spørsmål og svar</h2>
-          <p className="mx-auto mt-4 max-w-xl text-clinic-muted">
-            Har du et spørsmål som ikke besvares her, kan du sende det gjennom kontaktskjemaet.
-          </p>
-        </Reveal>
+        <SectionHeading
+          eyebrow="Ofte stilte spørsmål"
+          title="Spørsmål og svar"
+          lead="Har du et spørsmål som ikke besvares her, kan du sende det gjennom kontaktskjemaet."
+        />
         <Reveal>
           <FAQAccordion items={faq} />
         </Reveal>
