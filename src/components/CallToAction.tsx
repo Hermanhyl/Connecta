@@ -52,15 +52,11 @@ export function CallToAction({
             <CalendarCheck size={18} />
             {ctaLabel}
           </AnimatedButton>
-          <AnimatedButton
-            href={`tel:${site.phone.replace(/\s/g, '')}`}
-            variant="lightOutline"
-            size="lg"
-            className="w-full sm:w-auto"
-          >
-            <Phone size={17} />
+          {/* Informational only — not a button/link (no action, no pointer, no hover) */}
+          <p className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/40 px-8 py-4 text-base font-semibold tracking-wide text-white sm:w-auto">
+            <Phone size={17} aria-hidden="true" />
             Ring {site.phone}
-          </AnimatedButton>
+          </p>
         </div>
       </div>
     </motion.div>
