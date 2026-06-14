@@ -58,9 +58,12 @@ export function ContactForm() {
       noValidate
       className="space-y-5 rounded-3xl border border-clinic-line bg-white p-6 shadow-soft sm:p-8"
     >
+      <p className="text-sm text-clinic-muted">
+        Felt merket med <span className="text-red-600">*</span> er påkrevd.
+      </p>
       <div>
         <label htmlFor="navn" className="mb-1.5 block text-sm font-medium text-clinic-ink">
-          Navn
+          Navn <span className="text-red-600" aria-hidden="true">*</span>
         </label>
         <input
           id="navn"
@@ -81,7 +84,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-clinic-ink">
-          E-post
+          E-post <span className="text-red-600" aria-hidden="true">*</span>
         </label>
         <input
           id="email"
@@ -102,7 +105,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="melding" className="mb-1.5 block text-sm font-medium text-clinic-ink">
-          Melding
+          Melding <span className="text-red-600" aria-hidden="true">*</span>
         </label>
         <textarea
           id="melding"
