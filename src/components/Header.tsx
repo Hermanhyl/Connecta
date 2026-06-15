@@ -72,7 +72,7 @@ export function Header() {
   return (
     <motion.header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled ? 'bg-transparent' : 'nav-glass'
+        scrolled ? 'bg-transparent' : 'bg-clinic-blueDark'
       }`}
       initial={{ y: -80 }}
       animate={{ y: 0 }}
@@ -81,7 +81,7 @@ export function Header() {
       <div
         className={`relative z-50 mx-auto flex max-w-content items-center justify-between gap-4 px-5 text-white transition-all duration-300 sm:px-8 ${
           scrolled
-            ? 'my-2 rounded-full border border-white/10 nav-glass py-2.5 shadow-card'
+            ? 'my-2 rounded-full border border-white/10 bg-clinic-blueDark py-2.5 shadow-card'
             : 'my-0 border border-transparent py-4'
         }`}
       >

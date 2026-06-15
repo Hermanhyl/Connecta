@@ -107,21 +107,6 @@
   .btn-gold:hover::before {
     transform: translateX(135%);
   }
-
-  /* Frosted-glass navbar: blue tint that's solid behind the logo/edges and
-     fades clearer toward the middle, with a uniform backdrop blur. */
-  .nav-glass {
-    background-image: linear-gradient(
-      to right,
-      rgba(43, 79, 102, 0.92) 0%,
-      rgba(43, 79, 102, 0.82) 22%,
-      rgba(43, 79, 102, 0.5) 50%,
-      rgba(43, 79, 102, 0.82) 78%,
-      rgba(43, 79, 102, 0.92) 100%
-    );
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
