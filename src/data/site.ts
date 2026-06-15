@@ -186,6 +186,7 @@ export const services: ServiceBlock[] = [
 export type Therapist = {
   name: string
   initials: string
+  photo?: string
   paragraphs: string[]
   email: string
   languages: string
@@ -195,6 +196,7 @@ export const team: Therapist[] = [
   {
     name: 'Kjersti Hylland',
     initials: 'KH',
+    photo: '/Kjersti.webp',
     paragraphs: [
       'Kjersti er utdannet sosionom og kognitiv terapeut, og har i tillegg en videreutdanning i veiledning og coaching. Hun er sertifisert kursleder innenfor foreldreveilednings programmene “Tuning into kids” og “Tuning into teens”, samt mestringskurset “Tankevirus”.',
     ],

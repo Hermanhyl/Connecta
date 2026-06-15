@@ -26,9 +26,18 @@ export function About() {
                 className="flex h-full flex-col rounded-3xl border border-clinic-line bg-white p-8 shadow-soft transition-shadow hover:shadow-card"
               >
                 <div className="mb-5 flex items-center gap-4">
-                  <div className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-clinic-blue to-clinic-teal font-heading text-xl font-semibold text-white">
-                    {t.initials}
-                  </div>
+                  {t.photo ? (
+                    <img
+                      src={t.photo}
+                      alt={`Portrett av ${t.name}`}
+                      loading="lazy"
+                      className="h-16 w-16 shrink-0 rounded-2xl object-cover"
+                    />
+                  ) : (
+                    <div className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-clinic-blue to-clinic-teal font-heading text-xl font-semibold text-white">
+                      {t.initials}
+                    </div>
+                  )}
                   <h2 className="font-heading text-2xl font-semibold">{t.name}</h2>
                 </div>
 
