@@ -90,6 +90,14 @@
     </style>
   </head>
   <body>
+    <!-- Hidden form so Netlify Forms detects "kontakt" at build time.
+         The real, interactive form is rendered by React and posts to this. -->
+    <form name="kontakt" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="navn" />
+      <input type="email" name="email" />
+      <textarea name="melding"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
     <div id="root">
       <div class="app-loading" aria-hidden="true">
         <div class="app-spinner"></div>
