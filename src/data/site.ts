@@ -199,6 +199,9 @@ export const team: Therapist[] = [
     photo: '/Kjersti.webp',
     paragraphs: [
       'Kjersti er utdannet sosionom og kognitiv terapeut, og har i tillegg en videreutdanning i veiledning og coaching. Hun er sertifisert kursleder innenfor foreldreveilednings programmene “Tuning into kids” og “Tuning into teens”, samt mestringskurset “Tankevirus”.',
+      'Kjersti har mer enn 30 års erfaring fra arbeid med familieveiledning, samtaler med barn og ungdom, krisehåndtering, som miljøterapeut og samarbeid med offentlige systemer og nettverk.',
+      'Siden 2001 har hun hatt eget firma med oppdrag for både offentlig og privat sektor, i tillegg til egen terapipraksis hvor hun tilbyr bistand til privatpersoner. Hun har hatt ulike oppdrag for privat næringsliv med teambuildingseminar, konflikthåndtering i personalgruppe, og som prosessveileder og prosesscoach.',
+      'Kjersti har også igangsatt og drevet ulike samtalegrupper for ungdom og unge voksne knyttet til psykisk helse, som f.eks. “Guttas Prat”. Hun tilbyr kurs for foreldre om tema knyttet til barneoppdragelse, som f.eks. “Nei – et kjærlig svar”.',
     ],
     email: 'kjersti@connecta.no',
     languages: 'Norsk',
@@ -207,8 +210,10 @@ export const team: Therapist[] = [
     name: 'Amalie Hylland',
     initials: 'AH',
     paragraphs: [
-      'Amalie er utdannet og autorisert psykolog i Spania, og tilbyr online terapi til norske klienter. Hun har en omfattende erfaring som klinisk psykolog.',
-      'Hun har arbeidet med et bredt utvalg av psykiske helseutfordringer som angst, fobier, grubling, depresjon, sosiale vansker og ferdigheter, grensesetting, selvhevdelse, selvtillit, selvbilde, prokrastinering, selvskading, utbrenthet, diverse tvangslidelser, og psykose.',
+      'Amalie er utdannet og autorisert psykolog i Spania, og tilbyr online terapi til norske klienter. Hun har en omfattende erfaring som klinisk psykolog og har arbeidet med et bredt utvalg av psykiske helseutfordringer som angst, fobier, grubling, depresjon, sosiale vansker og ferdigheter, grensesetting, selvhevdelse, utbrenthet, selvtillit, selvbilde, prokrastinering, selvskading, diverse tvangslidelser og psykose.',
+      'Hun har en særskilt kompetanse i å kartlegge og forstå atferdsmønstre – hvordan de kan påvirke livskvaliteten vår negativt, og hvordan vi kan endre atferd og situasjoner som forårsaker problemer. I tillegg til studiet i klinisk psykologi har hun en mastergrad i atferdsmodifikasjon fra The Therapeutic Institute of Madrid (ITEMA).',
+      'Amalie har yrkeserfaring fra en internasjonal klinikk i Madrid og har arbeidet som psykolog for studenter ved IE University. For tiden kombinerer hun det kliniske arbeidet med å være foreleser ved det psykologiske fakultetet på European University of Madrid.',
+      'Hun beskriver seg selv som en varm og ikke-dømmende psykolog, dedikert til å støtte klientene sine i deres individuelle utviklingsreise. Behandlingen skreddersys hver klient med vekt på evidensbaserte metoder, og gir verktøy og strategier som er nyttige også etter terapiens slutt.',
     ],
     email: 'amalie@connecta.no',
     languages: 'Norsk, Engelsk og Spansk',
