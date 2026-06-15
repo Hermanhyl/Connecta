@@ -71,14 +71,18 @@ export function Header() {
 
   return (
     <motion.header
-      className="fixed inset-x-0 top-0 z-50"
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        scrolled ? 'bg-transparent' : 'bg-clinic-blueDark'
+      }`}
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <div
-        className={`relative z-50 mx-auto flex max-w-content items-center justify-between gap-4 rounded-full border border-white/10 bg-clinic-blueDark px-5 text-white shadow-card transition-all duration-300 sm:px-8 ${
-          scrolled ? 'my-2 py-2.5' : 'my-3 py-3.5'
+        className={`relative z-50 mx-auto flex max-w-content items-center justify-between gap-4 px-5 text-white transition-all duration-300 sm:px-8 ${
+          scrolled
+            ? 'my-2 rounded-full border border-white/10 bg-clinic-blueDark py-2.5 shadow-card'
+            : 'my-0 border border-transparent py-4'
         }`}
       >
         <Link to="/" aria-label="Connecta forside" className="shrink-0">
