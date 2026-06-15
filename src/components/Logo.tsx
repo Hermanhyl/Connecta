@@ -8,7 +8,7 @@ export function Logo({ className = '' }: LogoProps) {
     <img
       src="/logo_optim.png"
       alt="Connecta"
-      className={`h-9 w-auto sm:h-10 ${className}`}
+      className={`h-10 w-auto sm:h-12 ${className}`}
     />
   )
 }

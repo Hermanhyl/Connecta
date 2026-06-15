@@ -82,7 +82,7 @@ export function Header() {
         className={`relative z-50 mx-auto flex max-w-content items-center justify-between gap-4 px-5 text-white transition-all duration-300 sm:px-8 ${
           scrolled
             ? 'my-2 rounded-full border border-white/10 bg-clinic-blueDark py-2.5 shadow-card'
-            : 'my-0 border border-transparent py-4'
+            : 'my-0 border border-transparent py-5 sm:py-6'
         }`}
       >
         <Link to="/" aria-label="Connecta forside" className="shrink-0">
