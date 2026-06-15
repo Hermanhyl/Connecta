@@ -143,7 +143,7 @@ export function Home() {
 
       {/* Testimonials */}
       <Section className="container-content py-16">
-        <SectionHeading eyebrow="Hva sier andre om oss?" title="Ord fra dem vi har hjulpet" />
+        <SectionHeading eyebrow="Erfaringer" title="Hva andre sier om oss" />
         <Reveal>
           <TestimonialCarousel items={testimonials} />
         </Reveal>
