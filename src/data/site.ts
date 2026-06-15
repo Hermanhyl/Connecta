@@ -187,6 +187,8 @@ export type Therapist = {
   name: string
   initials: string
   photo?: string
+  role: string
+  focus: string[]
   paragraphs: string[]
   email: string
   languages: string
@@ -197,6 +199,14 @@ export const team: Therapist[] = [
     name: 'Kjersti Hylland',
     initials: 'KH',
     photo: '/Kjersti.webp',
+    role: 'Sosionom & kognitiv terapeut',
+    focus: [
+      'Familieveiledning',
+      'Foreldreveiledning',
+      'Barn & ungdom',
+      'Kognitiv atferdsterapi',
+      'Veiledning & coaching',
+    ],
     paragraphs: [
       'Kjersti er utdannet sosionom og kognitiv terapeut, og har i tillegg en videreutdanning i veiledning og coaching. Hun er sertifisert kursleder innenfor foreldreveilednings programmene “Tuning into kids” og “Tuning into teens”, samt mestringskurset “Tankevirus”.',
       'Kjersti har mer enn 30 års erfaring fra arbeid med familieveiledning, samtaler med barn og ungdom, krisehåndtering, som miljøterapeut og samarbeid med offentlige systemer og nettverk.',
@@ -209,6 +219,14 @@ export const team: Therapist[] = [
   {
     name: 'Amalie Hylland',
     initials: 'AH',
+    role: 'Autorisert psykolog',
+    focus: [
+      'Angst & depresjon',
+      'Atferdsterapi',
+      'Tvangslidelser',
+      'Selvbilde & selvtillit',
+      'Utbrenthet',
+    ],
     paragraphs: [
       'Amalie er utdannet og autorisert psykolog i Spania, og tilbyr online terapi til norske klienter. Hun har en omfattende erfaring som klinisk psykolog og har arbeidet med et bredt utvalg av psykiske helseutfordringer som angst, fobier, grubling, depresjon, sosiale vansker og ferdigheter, grensesetting, selvhevdelse, utbrenthet, selvtillit, selvbilde, prokrastinering, selvskading, diverse tvangslidelser og psykose.',
       'Hun har en særskilt kompetanse i å kartlegge og forstå atferdsmønstre – hvordan de kan påvirke livskvaliteten vår negativt, og hvordan vi kan endre atferd og situasjoner som forårsaker problemer. I tillegg til studiet i klinisk psykologi har hun en mastergrad i atferdsmodifikasjon fra The Therapeutic Institute of Madrid (ITEMA).',
