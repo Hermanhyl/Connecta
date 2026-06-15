@@ -219,7 +219,7 @@ export const team: Therapist[] = [
   {
     name: 'Amalie Hylland',
     initials: 'AH',
-    role: 'Autorisert psykolog',
+    role: 'Psykolog',
     focus: [
       'Angst & depresjon',
       'Atferdsterapi',
