@@ -336,9 +336,7 @@ export const pricing = {
       name: 'Kjersti',
       rows: [
         { label: 'Individualterapi 60 minutter', price: '900,-' },
-        { label: 'Individualterapi 75 minutter', price: '1125,-' },
         { label: 'Familieveiledning 60 minutter', price: '900,-' },
-        { label: 'Familieveiledning 75 minutter', price: '1125,-' },
         { label: 'Familieveiledning 90 minutter', price: '1350,-' },
       ],
     },
@@ -357,7 +355,6 @@ export const pricing = {
       name: 'Kjersti',
       tiers: [
         { duration: '60 minutter', rows: [{ label: '4 avtaler', price: '3.300,-' }, { label: '8 avtaler', price: '6.900,-' }] },
-        { duration: '75 minutter', rows: [{ label: '4 avtaler', price: '4.200,-' }, { label: '8 avtaler', price: '8.700,-' }] },
         { duration: '90 minutter', rows: [{ label: '4 avtaler', price: '5.100,-' }, { label: '8 avtaler', price: '10.500,-' }] },
       ],
     },
@@ -373,7 +370,7 @@ export const pricing = {
     'Å få til varig endring er en prosess som tar tid. Et pakkeforløp med regelmessige samtaler innebærer en forpliktelse overfor deg selv til å jobbe mot de endringer du ønsker å oppnå. En slik forpliktelse påvirker både oppmerksomhet og motivasjon som man tar med seg inn i terapien, og bidrar til å holde fokus på endringsprosessen. En forpliktelse om regelmessige samtaler sikrer også kontinuitet og fremdrift i det man jobber med.',
   cancellationTitle: 'Avbestilling av time',
   cancellation:
-    'Avbestilling kan gjøres ved å logge inn i portalen og avbestille den direkte der. Hvis du ikke får til dette, kan du sende en mail til kjersti@connecta.no eller amalie@connecta.no. Avbestilling av timer gjøres minimum 48 timer i forkant av oppsatt avtale. Dersom frist for avbestilling ikke overholdes, må timen betales for i sin helhet. Dette gjelder også ved sykdom.',
+    'Avbestilling gjør du ved å sende oss en SMS eller e-post (kjersti@connecta.no eller amalie@connecta.no), eller ved å ringe oss på 922 50 863. Avbestilling av timer gjøres minimum 48 timer i forkant av oppsatt avtale. Dersom frist for avbestilling ikke overholdes, må timen betales for i sin helhet. Dette gjelder også ved sykdom.',
 }
 
 // ---- FAQ ----
@@ -394,11 +391,11 @@ export const faq: Faq[] = [
   },
   {
     q: 'Hvordan bestiller jeg time?',
-    a: 'Det kan du gjøre direkte gjennom online booking, eller ved å ta kontakt her; kjersti@connecta.no eller amalie@connecta.no',
+    a: 'Du bestiller time ved å ta kontakt med oss – send en SMS eller e-post til kjersti@connecta.no eller amalie@connecta.no, eller ring oss på 922 50 863, så finner vi et tidspunkt som passer.',
   },
   {
     q: 'Hvordan avbestiller jeg en time?',
-    a: 'Avbestilling kan gjøres ved å logge inn i portalen og avbestille den direkte der. Hvis du ikke får til dette, kan du sende en mail til kjersti@connecta.no eller amalie@connecta.no. Avbestilling av timer gjøres minimum 48 timer i forkant av oppsatt avtale. Dersom frist for avbestilling ikke overholdes, må timen betales for i sin helhet. Dette gjelder også ved sykdom.',
+    a: 'Avbestilling gjør du ved å sende oss en SMS eller e-post (kjersti@connecta.no eller amalie@connecta.no), eller ved å ringe oss på 922 50 863. Avbestilling av timer gjøres minimum 48 timer i forkant av oppsatt avtale. Dersom frist for avbestilling ikke overholdes, må timen betales for i sin helhet. Dette gjelder også ved sykdom.',
   },
 ]
 
