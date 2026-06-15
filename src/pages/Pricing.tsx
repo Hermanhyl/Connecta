@@ -5,6 +5,11 @@ import { PageHero } from '../components/Decor'
 import { CallToAction } from '../components/CallToAction'
 import { Seo } from '../components/Seo'
 
+// Parse a Norwegian price/label string ("3.300,-", "4 avtaler") to a number.
+const num = (s: string) => parseInt(s.replace(/\D/g, ''), 10) || 0
+// Format a number as Norwegian kroner ("300,-", "1.350,-"); empty if not positive.
+const kr = (n: number) => (n > 0 ? `${n.toLocaleString('nb-NO').replace(/\s/g, '.')},-` : '')
+
 export function Pricing() {
   return (
     <>
@@ -66,14 +71,24 @@ export function Pricing() {
                         {tier.duration}
                       </p>
                       <ul className="divide-y divide-clinic-line">
-                        {tier.rows.map((r) => (
-                          <li key={r.label} className="flex items-center justify-between py-2.5">
-                            <span className="text-sm text-clinic-muted">{r.label}</span>
-                            <span className="font-heading text-lg font-semibold text-clinic-ink">
-                              {r.price}
-                            </span>
-                          </li>
-                        ))}
+                        {tier.rows.map((r) => {
+                          const saved = kr(num(tier.single) * num(r.label) - num(r.price))
+                          return (
+                            <li key={r.label} className="flex items-center justify-between py-2.5">
+                              <span className="text-sm text-clinic-muted">{r.label}</span>
+                              <span className="text-right">
+                                <span className="block font-heading text-lg font-semibold text-clinic-ink">
+                                  {r.price}
+                                </span>
+                                {saved && (
+                                  <span className="block text-xs font-medium text-clinic-tealText">
+                                    Spar {saved}
+                                  </span>
+                                )}
+                              </span>
+                            </li>
+                          )
+                        })}
                       </ul>
                     </div>
                   ))}

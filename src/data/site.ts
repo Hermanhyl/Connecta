@@ -354,14 +354,14 @@ export const pricing = {
     {
       name: 'Kjersti',
       tiers: [
-        { duration: '60 minutter', rows: [{ label: '4 avtaler', price: '3.300,-' }, { label: '8 avtaler', price: '6.900,-' }] },
-        { duration: '90 minutter', rows: [{ label: '4 avtaler', price: '5.100,-' }, { label: '8 avtaler', price: '10.500,-' }] },
+        { duration: '60 minutter', single: '900,-', rows: [{ label: '4 avtaler', price: '3.300,-' }, { label: '8 avtaler', price: '6.900,-' }] },
+        { duration: '90 minutter', single: '1.350,-', rows: [{ label: '4 avtaler', price: '5.100,-' }, { label: '8 avtaler', price: '10.500,-' }] },
       ],
     },
     {
       name: 'Amalie',
       tiers: [
-        { duration: '60 minutter', rows: [{ label: '4 avtaler', price: '4.100,-' }, { label: '8 avtaler', price: '8.500,-' }] },
+        { duration: '60 minutter', single: '1.100,-', rows: [{ label: '4 avtaler', price: '4.100,-' }, { label: '8 avtaler', price: '8.500,-' }] },
       ],
     },
   ],
