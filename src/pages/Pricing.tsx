@@ -51,25 +51,27 @@ export function Pricing() {
           <h2 className="text-3xl font-semibold sm:text-4xl">Terapipakker</h2>
         </Reveal>
 
-        <div className="mx-auto max-w-4xl space-y-8">
+        <div className="mx-auto grid max-w-4xl items-start gap-6 md:grid-cols-2">
           {pricing.packages.map((p) => (
             <Reveal key={p.name}>
-              <div>
-                <h3 className="mb-4 font-heading text-xl font-semibold text-clinic-blueDark">
+              <div className="h-full rounded-3xl border border-clinic-line bg-white p-7 shadow-soft">
+                <h3 className="mb-5 font-heading text-2xl font-semibold text-clinic-blueDark">
                   {p.name}
                 </h3>
-                <div className="grid gap-5 sm:grid-cols-3">
+                <div className="space-y-6">
                   {p.tiers.map((tier) => (
-                    <div
-                      key={tier.duration}
-                      className="rounded-3xl border border-clinic-line bg-white p-6 shadow-soft"
-                    >
-                      <p className="mb-4 font-heading text-lg font-semibold">{tier.duration}</p>
-                      <ul className="space-y-3">
+                    <div key={tier.duration}>
+                      <p className="mb-1 flex items-center gap-2 font-heading text-base font-semibold text-clinic-ink">
+                        <span className="h-1.5 w-1.5 rounded-full bg-clinic-gold" />
+                        {tier.duration}
+                      </p>
+                      <ul className="divide-y divide-clinic-line">
                         {tier.rows.map((r) => (
-                          <li key={r.label} className="flex items-center justify-between gap-3">
+                          <li key={r.label} className="flex items-center justify-between py-2.5">
                             <span className="text-sm text-clinic-muted">{r.label}</span>
-                            <span className="font-semibold text-clinic-ink">{r.price}</span>
+                            <span className="font-heading text-lg font-semibold text-clinic-ink">
+                              {r.price}
+                            </span>
                           </li>
                         ))}
                       </ul>
