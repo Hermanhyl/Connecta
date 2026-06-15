@@ -17,6 +17,7 @@ const Pricing = lazy(() => import('./pages/Pricing').then((m) => ({ default: m.P
 const Blog = lazy(() => import('./pages/Blog').then((m) => ({ default: m.Blog })))
 const BlogPost = lazy(() => import('./pages/BlogPost').then((m) => ({ default: m.BlogPost })))
 const Contact = lazy(() => import('./pages/Contact').then((m) => ({ default: m.Contact })))
+const Privacy = lazy(() => import('./pages/Privacy').then((m) => ({ default: m.Privacy })))
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })))
 
 function AnimatedRoutes() {
@@ -42,6 +43,7 @@ function AnimatedRoutes() {
             <Route path="/blogg" element={<Blog />} />
             <Route path="/blogg/:slug" element={<BlogPost />} />
             <Route path="/kontakt" element={<Contact />} />
+            <Route path="/personvern" element={<Privacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Mail, Phone, Clock } from 'lucide-react'
 import { contact, site, seo } from '../data/site'
 import { Section, Reveal } from '../components/Section'
@@ -76,6 +77,13 @@ export function Contact() {
           <Reveal>
             <h2 className="mb-5 font-heading text-2xl font-semibold">Skriv til oss!</h2>
             <ContactForm />
+            <p className="mt-4 text-xs text-clinic-muted">
+              Når du sender inn skjemaet, behandler vi opplysningene i tråd med vår{' '}
+              <Link to="/personvern" className="underline transition-colors hover:text-clinic-blue">
+                personvernerklæring
+              </Link>
+              .
+            </p>
           </Reveal>
         </div>
       </Section>

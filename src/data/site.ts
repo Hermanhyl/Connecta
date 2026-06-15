@@ -53,6 +53,11 @@ export const seo: Record<string, SeoMeta> = {
     description:
       'Ta kontakt med Connecta for terapi og veiledning online. Se åpningstider, telefon og e-post, eller send oss en melding via kontaktskjemaet.',
   },
+  '/personvern': {
+    title: 'Personvernerklæring | Connecta',
+    description:
+      'Slik behandler Connecta personopplysninger når du bruker nettsiden og tar kontakt med oss.',
+  },
 }
 
 export type NavItem = { label: string; to: string }
@@ -405,6 +410,69 @@ export const contact = {
   ],
   blurb:
     'Connecta tilbyr terapeutiske samtaler online. Vi har lang erfaring som terapeut og veileder i offentlig og privat sektor, og bistår gjerne med terapi for enkeltpersoner, familier, par og bedrifter. Hos oss kan du få hjelp til å finne løsninger, enten alene eller sammen med andre. Ta kontakt, så finner vi en løsning sammen!',
+}
+
+// ---- Personvernerklæring (GDPR) ----
+// NB: Utkast — bør kvalitetssikres juridisk før publisering.
+export const privacy = {
+  title: 'Personvernerklæring',
+  updated: 'Sist oppdatert: juni 2026',
+  draftNote:
+    'Dette er et utkast. Innholdet bør gjennomgås og kvalitetssikres (gjerne juridisk) før nettsiden tas i bruk.',
+  intro:
+    'Denne personvernerklæringen forklarer hvordan Connecta behandler personopplysninger når du bruker nettsiden vår og tar kontakt med oss.',
+  sections: [
+    {
+      heading: 'Behandlingsansvarlig',
+      paragraphs: [
+        'Connecta, ved Kjersti Hylland og Amalie Hylland, er behandlingsansvarlig for personopplysningene som behandles i forbindelse med denne nettsiden. Du kan kontakte oss på kjersti@connecta.no eller amalie@connecta.no, eller på telefon 922 50 863.',
+      ],
+    },
+    {
+      heading: 'Hvilke opplysninger vi behandler',
+      paragraphs: [
+        'Når du bruker kontaktskjemaet på nettsiden, behandler vi navnet ditt, e-postadressen din og innholdet i meldingen du sender. Vi samler ikke inn opplysninger om deg utover det du selv oppgir.',
+        'Selve terapitimene foregår på en egen, sikker plattform som overholder europeiske personvernregler (GDPR). Behandling av helseopplysninger i forbindelse med terapien reguleres i egen avtale og journal, og omfattes ikke av denne erklæringen.',
+      ],
+    },
+    {
+      heading: 'Formål og behandlingsgrunnlag',
+      paragraphs: [
+        'Vi bruker opplysningene fra kontaktskjemaet utelukkende til å svare på henvendelsen din og eventuelt avtale en time. Behandlingsgrunnlaget er ditt samtykke og vår berettigede interesse i å besvare henvendelser, jf. personvernforordningen artikkel 6.',
+      ],
+    },
+    {
+      heading: 'Lagring og sletting',
+      paragraphs: [
+        'Henvendelser lagres kun så lenge det er nødvendig for å følge opp kontakten, og slettes når de ikke lenger er nødvendige. Vi deler ikke opplysningene dine med uvedkommende.',
+      ],
+    },
+    {
+      heading: 'Databehandlere',
+      paragraphs: [
+        'Nettsiden driftes hos Netlify, som på våre vegne lagrer skjemaer som sendes inn. E-post håndteres av vår e-postleverandør. Disse opptrer som databehandlere og behandler kun opplysninger etter våre instrukser.',
+      ],
+    },
+    {
+      heading: 'Informasjonskapsler (cookies)',
+      paragraphs: [
+        'Denne nettsiden bruker ikke informasjonskapsler til sporing eller analyse. For utseendet lastes skrifttyper inn fra Google Fonts; ved dette overføres IP-adressen din til Google. Ønsker du å unngå dette, kan du blokkere eksterne skrifter i nettleseren din.',
+      ],
+    },
+    {
+      heading: 'Dine rettigheter',
+      paragraphs: [
+        'Du har rett til innsyn i, retting av og sletting av personopplysningene vi har om deg. Du kan også be om begrensning av behandlingen og protestere mot den. Ta kontakt med oss for å bruke rettighetene dine.',
+        'Mener du at vi behandler opplysningene dine i strid med regelverket, har du rett til å klage til Datatilsynet.',
+      ],
+    },
+    {
+      heading: 'Endringer',
+      paragraphs: [
+        'Vi kan oppdatere denne personvernerklæringen ved behov. Den til enhver tid gjeldende versjonen er tilgjengelig på denne siden.',
+      ],
+    },
+  ],
 }
 
 // ---- Blog ----

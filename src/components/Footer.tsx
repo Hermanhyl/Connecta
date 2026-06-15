@@ -69,7 +69,12 @@ export function Footer() {
 
       <div className="border-t border-clinic-line">
         <div className="container-content flex flex-col items-center justify-between gap-3 py-6 text-xs text-clinic-muted sm:flex-row">
-          <p>© {new Date().getFullYear()} {site.name}. Med enerett.</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <p>© {new Date().getFullYear()} {site.name}. Med enerett.</p>
+            <Link to="/personvern" className="transition-colors hover:text-clinic-blue">
+              Personvern
+            </Link>
+          </div>
           {/* Developer credit — TEMPORARY URL, swap when the real domain is ready */}
           <a
             href="https://hyllanddesignogutvikling.netlify.app/"
