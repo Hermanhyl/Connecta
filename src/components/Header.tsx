@@ -77,10 +77,8 @@ export function Header() {
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <div
-        className={`relative z-50 mx-auto flex max-w-content items-center justify-between gap-4 px-5 transition-all duration-300 sm:px-8 ${
-          scrolled
-            ? 'my-2 rounded-full border border-clinic-line/80 bg-white/85 py-2.5 shadow-soft backdrop-blur-md'
-            : 'my-3 border border-transparent py-3.5'
+        className={`relative z-50 mx-auto flex max-w-content items-center justify-between gap-4 rounded-full border border-white/10 bg-clinic-blueDark px-5 text-white shadow-card transition-all duration-300 sm:px-8 ${
+          scrolled ? 'my-2 py-2.5' : 'my-3 py-3.5'
         }`}
       >
         <Link to="/" aria-label="Connecta forside" className="shrink-0">
@@ -95,9 +93,7 @@ export function Header() {
               end={item.to === '/'}
               className={({ isActive }) =>
                 `relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-200 ${
-                  isActive
-                    ? 'text-clinic-blue'
-                    : 'text-clinic-muted hover:text-clinic-blueDark'
+                  isActive ? 'text-white' : 'text-white/70 hover:text-white'
                 }`
               }
             >
@@ -117,13 +113,15 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <AnimatedButton to="/kontakt">Bestill time</AnimatedButton>
+          <AnimatedButton to="/kontakt" variant="gold">
+            Bestill time
+          </AnimatedButton>
         </div>
 
         <button
           ref={menuBtnRef}
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full text-clinic-blueDark transition-colors hover:bg-clinic-surface lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 lg:hidden"
           aria-label={open ? 'Lukk meny' : 'Åpne meny'}
           aria-expanded={open}
           aria-haspopup="dialog"
