@@ -16,9 +16,9 @@ export function About() {
       />
 
       <Section className="container-content py-14">
-        <div className="mx-auto grid max-w-4xl items-start gap-8 md:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl items-stretch gap-8 md:grid-cols-2">
           {team.map((t) => (
-            <Reveal key={t.name}>
+            <Reveal key={t.name} className="h-full">
               <TeamCard therapist={t} />
             </Reveal>
           ))}
