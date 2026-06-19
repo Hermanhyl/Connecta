@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://connecta-preview.netlify.app/sitemap.xml
+Sitemap: https://connecta.no/sitemap.xml
