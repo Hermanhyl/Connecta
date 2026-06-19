@@ -197,7 +197,6 @@ export const team: Therapist[] = [
   {
     name: 'Kjersti Hylland',
     initials: 'KH',
-    photo: '/Kjersti.webp',
     role: 'Sosionom & kognitiv terapeut',
     focus: [
       'Familieveiledning',
@@ -218,7 +217,7 @@ export const team: Therapist[] = [
   {
     name: 'Amalie Hylland',
     initials: 'AH',
-    role: 'Psykolog',
+    role: 'Terapeut',
     focus: [
       'Angst & depresjon',
       'Atferdsterapi',
@@ -230,7 +229,7 @@ export const team: Therapist[] = [
       'Amalie er utdannet og autorisert psykolog i Spania, og tilbyr online terapi til norske klienter. Hun har en omfattende erfaring som klinisk psykolog og har arbeidet med et bredt utvalg av psykiske helseutfordringer som angst, fobier, grubling, depresjon, sosiale vansker og ferdigheter, grensesetting, selvhevdelse, utbrenthet, selvtillit, selvbilde, prokrastinering, selvskading, diverse tvangslidelser og psykose.',
       'Hun har en særskilt kompetanse i å kartlegge og forstå atferdsmønstre – hvordan de kan påvirke livskvaliteten vår negativt, og hvordan vi kan endre atferd og situasjoner som forårsaker problemer. I tillegg til studiet i klinisk psykologi har hun en mastergrad i atferdsmodifikasjon fra The Therapeutic Institute of Madrid (ITEMA).',
       'Amalie har yrkeserfaring fra en internasjonal klinikk i Madrid og har arbeidet som psykolog for studenter ved IE University. For tiden kombinerer hun det kliniske arbeidet med å være foreleser ved det psykologiske fakultetet på European University of Madrid.',
-      'Hun beskriver seg selv som en varm og ikke-dømmende psykolog, dedikert til å støtte klientene sine i deres individuelle utviklingsreise. Behandlingen skreddersys hver klient med vekt på evidensbaserte metoder, og gir verktøy og strategier som er nyttige også etter terapiens slutt.',
+      'Hun beskriver seg selv som en varm og ikke-dømmende terapeut, dedikert til å støtte klientene sine i deres individuelle utviklingsreise. Behandlingen skreddersys hver klient med vekt på evidensbaserte metoder, og gir verktøy og strategier som er nyttige også etter terapiens slutt.',
     ],
     email: 'amalie@connecta.no',
     languages: 'Norsk, Engelsk og Spansk',
