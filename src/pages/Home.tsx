@@ -85,7 +85,7 @@ export function Home() {
                   <h.icon size={22} strokeWidth={1.7} />
                 </div>
                 <h3 className="font-heading text-lg font-semibold">{h.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-clinic-muted">{h.text}</p>
+                <p className="mt-1.5 text-base leading-relaxed text-clinic-muted">{h.text}</p>
               </Reveal>
             ))}
           </Section>
@@ -111,7 +111,7 @@ export function Home() {
                 <p className="flex-1 leading-relaxed text-clinic-muted">{s.text}</p>
                 <Link
                   to="/tjenester"
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-clinic-blue transition-colors hover:text-clinic-blueDark"
+                  className="mt-5 inline-flex items-center gap-1.5 text-base font-semibold text-clinic-blue transition-colors hover:text-clinic-blueDark"
                 >
                   Les mer
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

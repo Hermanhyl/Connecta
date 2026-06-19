@@ -42,6 +42,12 @@ fill — the one exception is the primary CTA button. On dark (`blueDark`) bands
 
 Line length for long-form text: ~65–70 characters (`max-w-2xl` for article bodies). Body ≥ 16px.
 
+**Readability rule (a11y):** content and interactive UI text — paragraphs, card body,
+nav links, tab labels, form labels, "Les mer" links, list rows, footer links — should be
+**`text-base` (16px) or larger**. Reserve `text-sm` (14px) for genuinely secondary labels
+(meta/date lines, the privacy micro-note, form error/help text) and `text-xs` only for
+fine print. Don't drop content below 16px just to fit — adjust layout instead.
+
 ## 3. Layout & spacing
 
 - Page width: `.container-content` = `max-w-content` (72rem) with `px-5 sm:px-8`.

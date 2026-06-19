@@ -55,7 +55,7 @@ export function ServiceGroupTabs({ groups }: { groups: Group[] }) {
               tabIndex={isActive ? 0 : -1}
               onClick={() => setActive(i)}
               onKeyDown={(e) => onKeyDown(e, i)}
-              className={`relative flex flex-1 cursor-pointer items-center gap-3 rounded-2xl px-4 py-3 text-left text-sm font-medium transition-colors duration-200 ${
+              className={`relative flex flex-1 cursor-pointer items-center gap-3 rounded-2xl px-4 py-3 text-left text-base font-medium transition-colors duration-200 ${
                 isActive ? 'text-clinic-blueDark' : 'text-clinic-muted hover:text-clinic-blueDark'
               }`}
             >
@@ -103,7 +103,7 @@ export function ServiceGroupTabs({ groups }: { groups: Group[] }) {
               return (
                 <li key={i} className="flex gap-3 rounded-2xl bg-white p-4 shadow-soft">
                   <Check size={18} className="mt-0.5 shrink-0 text-clinic-teal" aria-hidden="true" />
-                  <p className="text-sm leading-relaxed text-clinic-muted">
+                  <p className="text-base leading-relaxed text-clinic-muted">
                     {body ? (
                       <>
                         <span className="font-semibold text-clinic-ink">{lead}: </span>

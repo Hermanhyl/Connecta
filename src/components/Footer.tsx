@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container-content grid gap-12 py-16 md:grid-cols-3">
         <div>
           <Logo />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
+          <p className="mt-4 max-w-xs text-base leading-relaxed text-white/70">
             Terapi og veiledning online. Ta kontakt, så finner vi en løsning sammen.
           </p>
         </div>
@@ -23,7 +23,7 @@ export function Footer() {
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  className="text-sm text-white/70 transition-colors hover:text-white"
+                  className="text-base text-white/70 transition-colors hover:text-white"
                 >
                   {item.label}
                 </Link>
@@ -36,7 +36,7 @@ export function Footer() {
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
             Kontakt
           </h3>
-          <ul className="space-y-3 text-sm text-white/70">
+          <ul className="space-y-3 text-base text-white/70">
             <li className="flex items-center gap-2.5">
               <Phone size={16} className="text-clinic-teal" aria-hidden="true" />
               <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="transition-colors hover:text-white">
@@ -68,7 +68,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-content flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/60 sm:flex-row">
+        <div className="container-content flex flex-col items-center justify-between gap-3 py-6 text-sm text-white/60 sm:flex-row">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <p>© {new Date().getFullYear()} {site.name}. Med enerett.</p>
             <Link to="/personvern" className="transition-colors hover:text-white">

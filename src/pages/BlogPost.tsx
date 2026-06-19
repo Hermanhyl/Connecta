@@ -58,7 +58,7 @@ export function BlogPost() {
           <div className="mx-auto max-w-2xl">
             <Link
               to="/blogg"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-clinic-blue transition-colors hover:text-clinic-blueDark"
+              className="inline-flex items-center gap-1.5 text-base font-medium text-clinic-blue transition-colors hover:text-clinic-blueDark"
             >
               <ArrowLeft size={16} />
               Tilbake til bloggen

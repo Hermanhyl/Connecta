@@ -82,7 +82,7 @@ export function Services() {
                               {t.heading}
                             </h3>
                           </div>
-                          <p className="text-sm leading-relaxed text-clinic-muted">{t.text}</p>
+                          <p className="text-base leading-relaxed text-clinic-muted">{t.text}</p>
                         </div>
                       )
                     })}

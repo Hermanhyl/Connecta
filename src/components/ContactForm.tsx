@@ -96,11 +96,11 @@ export function ContactForm() {
         </label>
       </p>
 
-      <p className="text-sm text-clinic-muted">
+      <p className="text-base text-clinic-muted">
         Felt merket med <span className="text-base font-bold text-red-600">*</span> er påkrevd.
       </p>
       <div>
-        <label htmlFor="navn" className="mb-1.5 block text-sm font-medium text-clinic-ink">
+        <label htmlFor="navn" className="mb-1.5 block text-base font-medium text-clinic-ink">
           Navn <span className="align-middle text-lg font-bold leading-none text-red-600" aria-hidden="true">*</span>
         </label>
         <input
@@ -123,7 +123,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-clinic-ink">
+        <label htmlFor="email" className="mb-1.5 block text-base font-medium text-clinic-ink">
           E-post <span className="align-middle text-lg font-bold leading-none text-red-600" aria-hidden="true">*</span>
         </label>
         <input
@@ -146,7 +146,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="melding" className="mb-1.5 block text-sm font-medium text-clinic-ink">
+        <label htmlFor="melding" className="mb-1.5 block text-base font-medium text-clinic-ink">
           Melding <span className="align-middle text-lg font-bold leading-none text-red-600" aria-hidden="true">*</span>
         </label>
         <textarea

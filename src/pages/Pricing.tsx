@@ -44,7 +44,7 @@ export function Pricing() {
           ))}
         </div>
 
-        <Reveal className="mx-auto mt-6 flex max-w-4xl items-start gap-3 rounded-2xl bg-clinic-surface px-5 py-4 text-sm text-clinic-muted">
+        <Reveal className="mx-auto mt-6 flex max-w-4xl items-start gap-3 rounded-2xl bg-clinic-surface px-5 py-4 text-base text-clinic-muted">
           <Info size={18} className="mt-0.5 shrink-0 text-clinic-blue" />
           <p>{pricing.travelNote}</p>
         </Reveal>
@@ -75,13 +75,13 @@ export function Pricing() {
                           const saved = kr(num(tier.single) * num(r.label) - num(r.price))
                           return (
                             <li key={r.label} className="flex items-center justify-between py-2.5">
-                              <span className="text-sm text-clinic-muted">{r.label}</span>
+                              <span className="text-base text-clinic-muted">{r.label}</span>
                               <span className="text-right">
                                 <span className="block font-heading text-lg font-semibold text-clinic-ink">
                                   {r.price}
                                 </span>
                                 {saved && (
-                                  <span className="block text-xs font-medium text-clinic-tealText">
+                                  <span className="block text-sm font-medium text-clinic-tealText">
                                     Spar {saved}
                                   </span>
                                 )}

@@ -9,8 +9,8 @@ const base =
   'inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-wide transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2'
 
 const sizes: Record<Size, string> = {
-  md: 'px-6 py-3 text-sm',
-  lg: 'px-8 py-4 text-base',
+  md: 'px-6 py-3 text-base',
+  lg: 'px-8 py-4 text-lg',
 }
 
 const variants: Record<Variant, string> = {

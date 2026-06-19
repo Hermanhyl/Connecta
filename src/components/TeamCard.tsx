@@ -26,7 +26,7 @@ export function TeamCard({ therapist: t }: { therapist: Therapist }) {
         )}
         <div>
           <h2 className="font-heading text-2xl font-semibold leading-tight">{t.name}</h2>
-          <p className="mt-1 text-sm font-medium text-clinic-tealText">{t.role}</p>
+          <p className="mt-1 text-base font-medium text-clinic-tealText">{t.role}</p>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ export function TeamCard({ therapist: t }: { therapist: Therapist }) {
         {t.focus.map((tag) => (
           <li
             key={tag}
-            className="rounded-full bg-clinic-surface px-3 py-1 text-xs font-medium text-clinic-blueDark"
+            className="rounded-full bg-clinic-surface px-3 py-1 text-sm font-medium text-clinic-blueDark"
           >
             {tag}
           </li>
@@ -71,7 +71,7 @@ export function TeamCard({ therapist: t }: { therapist: Therapist }) {
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
-            className="mt-4 inline-flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-clinic-blue transition-colors hover:text-clinic-blueDark"
+            className="mt-4 inline-flex cursor-pointer items-center gap-1.5 text-base font-semibold text-clinic-blue transition-colors hover:text-clinic-blueDark"
           >
             {open ? 'Vis mindre' : `Les mer om ${firstName}`}
             <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
@@ -82,7 +82,7 @@ export function TeamCard({ therapist: t }: { therapist: Therapist }) {
       </div>
 
       {/* Footer: contact + languages */}
-      <div className="mt-6 space-y-2.5 border-t border-clinic-line pt-5 text-sm">
+      <div className="mt-6 space-y-2.5 border-t border-clinic-line pt-5 text-base">
         <a
           href={`mailto:${t.email}`}
           className="flex items-center gap-2.5 text-clinic-blue transition-colors hover:text-clinic-blueDark"

@@ -44,7 +44,7 @@ export function CbtTriad({ caption, note, nodes }: Props) {
                 <span className="font-heading text-lg font-semibold text-clinic-ink">
                   {node.label}
                 </span>
-                <span className="mt-1 text-sm leading-snug text-clinic-muted">{node.desc}</span>
+                <span className="mt-1 text-base leading-snug text-clinic-muted">{node.desc}</span>
               </motion.div>
 
               {i < nodes.length - 1 && (

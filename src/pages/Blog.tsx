@@ -29,7 +29,7 @@ export function Blog() {
                   <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_30%,white_0,transparent_45%),radial-gradient(circle_at_80%_70%,white_0,transparent_40%)]" />
                 </div>
                 <div className="flex flex-1 flex-col p-7">
-                  <p className="mb-3 inline-flex items-center gap-1.5 text-xs font-medium text-clinic-tealText">
+                  <p className="mb-3 inline-flex items-center gap-1.5 text-sm font-medium text-clinic-tealText">
                     <CalendarDays size={14} />
                     {post.date}
                   </p>
@@ -39,7 +39,7 @@ export function Blog() {
                   <p className="flex-1 leading-relaxed text-clinic-muted">{post.excerpt}</p>
                   <Link
                     to={`/blogg/${post.slug}`}
-                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-clinic-blue transition-colors hover:text-clinic-blueDark"
+                    className="mt-5 inline-flex items-center gap-1.5 text-base font-semibold text-clinic-blue transition-colors hover:text-clinic-blueDark"
                   >
                     Les mer
                     <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

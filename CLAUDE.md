@@ -64,7 +64,8 @@ Routes: `/` `·` `/om-oss` `·` `/tjenester` `·` `/behandlingsmetode` `·` `/pr
   `sm:` `md:` `lg:`. Stack on mobile, expand on larger screens.
 - **Test at 375px** before considering layout done. No horizontal scroll at any width.
 - Minimum 16px body text on mobile; touch targets ≥ 44×44px.
-- The mobile nav drawer lives in `Header.tsx` (shown below `lg`). The top bar must stay
+- The mobile nav drawer lives in `Header.tsx` (shown below `xl`; the full horizontal nav
+  needs `xl` width to fit 7 links at 16px without cramping). The top bar must stay
   `z-50` so the close (✕) button sits above the drawer overlay (`z-40`).
 
 ### 3. Styling via tokens, never hardcoded values

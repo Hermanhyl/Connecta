@@ -23,7 +23,7 @@ export function Contact() {
               </h2>
               <ul className="divide-y divide-clinic-line">
                 {contact.openingHours.map((o) => (
-                  <li key={o.day} className="flex items-center justify-between py-2.5 text-sm">
+                  <li key={o.day} className="flex items-center justify-between py-2.5 text-base">
                     <span className="text-clinic-muted">{o.day}</span>
                     <span className="font-medium text-clinic-ink">{o.hours}</span>
                   </li>
@@ -35,7 +35,7 @@ export function Contact() {
               <h2 className="mb-5 font-heading text-xl font-semibold text-white">
                 Kontaktinformasjon
               </h2>
-              <ul className="space-y-4 text-sm">
+              <ul className="space-y-4 text-base">
                 <li>
                   <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="flex items-center gap-3 transition-opacity hover:opacity-80">
                     <span className="grid h-10 w-10 place-items-center rounded-full bg-white/10">
@@ -77,7 +77,7 @@ export function Contact() {
           <Reveal>
             <h2 className="mb-5 font-heading text-2xl font-semibold">Skriv til oss!</h2>
             <ContactForm />
-            <p className="mt-4 text-xs text-clinic-muted">
+            <p className="mt-4 text-sm text-clinic-muted">
               Når du sender inn skjemaet, behandler vi opplysningene i tråd med vår{' '}
               <Link to="/personvern" className="underline transition-colors hover:text-clinic-blue">
                 personvernerklæring

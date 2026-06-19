@@ -89,14 +89,14 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Hovedmeny">
+        <nav className="hidden items-center gap-1 xl:flex" aria-label="Hovedmeny">
           {nav.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               end={item.to === '/'}
               className={({ isActive }) =>
-                `relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-200 ${
+                `relative rounded-full px-3 py-2 text-base font-medium transition-colors duration-200 ${
                   isActive ? 'text-white' : 'text-white/70 hover:text-white'
                 }`
               }
@@ -116,7 +116,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <AnimatedButton to="/kontakt" variant="gold">
             Bestill time
           </AnimatedButton>
@@ -125,7 +125,7 @@ export function Header() {
         <button
           ref={menuBtnRef}
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 xl:hidden"
           aria-label={open ? 'Lukk meny' : 'Åpne meny'}
           aria-expanded={open}
           aria-haspopup="dialog"
@@ -139,7 +139,7 @@ export function Header() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 top-0 z-40 lg:hidden"
+            className="fixed inset-0 top-0 z-40 xl:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -183,7 +183,7 @@ export function Header() {
               </div>
               <a
                 href={`tel:${site.phone.replace(/\s/g, '')}`}
-                className="mt-4 text-center text-sm text-clinic-muted"
+                className="mt-4 text-center text-base text-clinic-muted"
               >
                 Telefon: {site.phone}
               </a>
