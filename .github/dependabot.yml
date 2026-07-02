@@ -1,0 +1,15 @@
+# Automated dependency-update PRs (OWASP Top 10:2025 A03: Software Supply Chain).
+# Dependabot opens PRs when a dependency has a newer or security-fixed version.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      # Batch minor/patch bumps into one PR to reduce noise.
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
