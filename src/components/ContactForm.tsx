@@ -159,8 +159,12 @@ export function ContactForm() {
           onChange={(e) => setValues({ ...values, melding: e.target.value })}
           aria-required="true"
           aria-invalid={!!errors.melding}
-          aria-describedby={errors.melding ? 'melding-error' : undefined}
+          aria-describedby={errors.melding ? 'melding-hint melding-error' : 'melding-hint'}
         />
+        <p id="melding-hint" className="mt-1.5 text-sm text-clinic-muted">
+          Unngå å skrive sensitive helseopplysninger her. Beskriv kort hva du ønsker hjelp med, så
+          tar vi det trygt videre.
+        </p>
         {errors.melding && (
           <p id="melding-error" role="alert" className="mt-1.5 text-sm text-red-600">
             {errors.melding}

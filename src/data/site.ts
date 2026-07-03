@@ -456,7 +456,8 @@ export const privacy: {
       paragraphs: [
         'Vi behandler bare de opplysningene du selv gir oss, og kun til det formålet de er samlet inn for. Det er frivillig å ta kontakt med oss.',
         'Kontaktskjema: Når du sender en henvendelse via skjemaet på nettsiden, behandler vi navnet ditt, e-postadressen din og innholdet i meldingen. Vi bruker opplysningene til å svare på henvendelsen og eventuelt avtale en time. Behandlingsgrunnlaget er vår berettigede interesse i å kunne besvare henvendelser (personvernforordningen art. 6 nr. 1 bokstav f), og tiltak før avtaleinngåelse dersom henvendelsen gjelder et mulig kundeforhold (art. 6 nr. 1 bokstav b).',
-        'Du bestemmer selv hva du skriver i meldingen. Vi oppfordrer deg til ikke å oppgi sensitive helseopplysninger i skjemaet. Det holder å beskrive kort hva du ønsker hjelp med, så tar vi det videre på en trygg måte.',
+        'Du bestemmer selv hva du skriver i meldingen, men vi ber deg om å ikke oppgi sensitive opplysninger i skjemaet. Det gjelder blant annet detaljerte helseopplysninger, diagnoser og andre særlige kategorier av personopplysninger (personvernforordningen art. 9). Det holder å beskrive kort hva du ønsker hjelp med, så tar vi det videre på en trygg måte. Sensitive tema hører hjemme i selve terapien, ikke i kontaktskjemaet.',
+        'Skulle du likevel sende oss slike opplysninger, behandler vi dem konfidensielt, deler dem ikke med uvedkommende, og sletter dem når de ikke lenger er nødvendige for å følge opp henvendelsen.',
         'E-post og telefon: Tar du kontakt på e-post eller telefon, behandler vi kontaktopplysningene dine og det du formidler, på samme grunnlag, for å svare deg og følge opp.',
         'Vi bruker ikke opplysningene til automatiske avgjørelser eller profilering.',
       ],
