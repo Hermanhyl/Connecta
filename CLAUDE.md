@@ -90,8 +90,12 @@ Routes: `/` `·` `/om-oss` `·` `/tjenester` `·` `/behandlingsmetode` `·` `/pr
 ## Deployment (Netlify)
 
 - `netlify.toml` sets `build = npm run build`, `publish = dist`.
-- SPA fallback (`/* → /index.html 200`) is in both `netlify.toml` and `public/_redirects` —
-  required so deep links like `/om-oss` don't 404. Keep it.
+- Routing lives only in `public/_redirects` (Netlify processes it before `netlify.toml`).
+  It is a route allowlist: valid app routes rewrite to `/index.html` with `200` (so deep
+  links like `/om-oss` work), old WordPress trailing-slash URLs `301` to the canonical
+  route, and everything else rewrites to `/index.html` with a real `404` (so stale/old URLs
+  return 404 and search engines drop them). When you add a new route in `App.tsx`, add a
+  matching `200` line to `_redirects` or it will 404.
 
 ## Git / commits
 

@@ -2,11 +2,8 @@
   command = "npm run build"
   publish = "dist"
 
-# SPA fallback: serve index.html for all client-side routes (React Router)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Routing (SPA rewrites + real 404 for stale URLs) lives in public/_redirects,
+# which Netlify processes first. Keeping it in one place avoids conflicting rules.
 
 # Security headers applied to every response
 [[headers]]

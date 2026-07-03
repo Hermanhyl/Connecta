@@ -1,1 +1,23 @@
-/*    /index.html   200
+# Old WordPress links used trailing slashes. Send them to the canonical route.
+/om-oss/             /om-oss             301
+/tjenester/          /tjenester          301
+/behandlingsmetode/  /behandlingsmetode  301
+/priser/             /priser             301
+/blogg/              /blogg              301
+/kontakt/            /kontakt            301
+/personvern/         /personvern         301
+
+# Valid app routes: serve the SPA with a 200.
+/                    /index.html         200
+/om-oss              /index.html         200
+/tjenester           /index.html         200
+/behandlingsmetode   /index.html         200
+/priser              /index.html         200
+/blogg               /index.html         200
+/blogg/*             /index.html         200
+/kontakt             /index.html         200
+/personvern          /index.html         200
+
+# Anything else is genuinely gone (e.g. stale old URLs). Render the app so the
+# NotFound page still shows, but return a real 404 so search engines drop it.
+/*                   /index.html         404
