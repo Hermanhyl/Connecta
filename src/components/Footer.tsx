@@ -71,6 +71,7 @@ export function Footer() {
         <div className="container-content flex flex-col items-center justify-between gap-3 py-6 text-sm text-white/60 sm:flex-row">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <p>© {new Date().getFullYear()} {site.name}. Med enerett.</p>
+            <p>Org.nr {site.orgNr}</p>
             <Link to="/personvern" className="transition-colors hover:text-white">
               Personvern
             </Link>

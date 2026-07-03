@@ -4,6 +4,7 @@
 export const site = {
   name: 'Connecta',
   tagline: 'Terapi og veiledning online',
+  orgNr: '990 233 267',
   phone: '922 50 863',
   emails: {
     kjersti: 'kjersti@connecta.no',
@@ -448,7 +449,7 @@ export const privacy: {
     {
       heading: 'Behandlingsansvarlig',
       paragraphs: [
-        'Connecta ved Kjersti Hylland og Amalie Hylland er behandlingsansvarlig for personopplysningene som behandles i forbindelse med denne nettsiden og henvendelser til oss. Har du spørsmål om hvordan vi behandler personopplysninger, kan du kontakte oss på e-post kjersti@connecta.no eller amalie@connecta.no, eller på telefon 922 50 863.',
+        `Connecta ved Kjersti Hylland og Amalie Hylland (org.nr ${site.orgNr}) er behandlingsansvarlig for personopplysningene som behandles i forbindelse med denne nettsiden og henvendelser til oss. Har du spørsmål om hvordan vi behandler personopplysninger, kan du kontakte oss på e-post kjersti@connecta.no eller amalie@connecta.no, eller på telefon 922 50 863.`,
       ],
     },
     {
