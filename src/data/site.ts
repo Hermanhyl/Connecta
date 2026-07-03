@@ -434,62 +434,93 @@ export const contact = {
 
 // ---- Personvernerklæring (GDPR) ----
 // NB: Utkast — bør kvalitetssikres juridisk før publisering.
-export const privacy = {
+export const privacy: {
+  title: string
+  updated: string
+  intro: string
+  sections: { heading: string; paragraphs: string[]; bullets?: string[] }[]
+} = {
   title: 'Personvernerklæring',
-  updated: 'Sist oppdatert: juni 2026',
-  draftNote:
-    'Dette er et utkast. Innholdet bør gjennomgås og kvalitetssikres (gjerne juridisk) før nettsiden tas i bruk.',
+  updated: 'Sist oppdatert: 3. juli 2026',
   intro:
-    'Denne personvernerklæringen forklarer hvordan Connecta behandler personopplysninger når du bruker nettsiden vår og tar kontakt med oss.',
+    'Denne personvernerklæringen forklarer hvordan Connecta behandler personopplysninger når du bruker nettsiden vår og tar kontakt med oss. Vi er opptatt av å behandle opplysningene dine trygt, og av å samle inn så lite som mulig.',
   sections: [
     {
       heading: 'Behandlingsansvarlig',
       paragraphs: [
-        'Connecta, ved Kjersti Hylland og Amalie Hylland, er behandlingsansvarlig for personopplysningene som behandles i forbindelse med denne nettsiden. Du kan kontakte oss på kjersti@connecta.no eller amalie@connecta.no, eller på telefon 922 50 863.',
+        'Connecta ved Kjersti Hylland og Amalie Hylland er behandlingsansvarlig for personopplysningene som behandles i forbindelse med denne nettsiden og henvendelser til oss. Har du spørsmål om hvordan vi behandler personopplysninger, kan du kontakte oss på e-post kjersti@connecta.no eller amalie@connecta.no, eller på telefon 922 50 863.',
       ],
     },
     {
-      heading: 'Hvilke opplysninger vi behandler',
+      heading: 'Hvilke opplysninger vi behandler, og hvorfor',
       paragraphs: [
-        'Når du bruker kontaktskjemaet på nettsiden, behandler vi navnet ditt, e-postadressen din og innholdet i meldingen du sender. Vi samler ikke inn opplysninger om deg utover det du selv oppgir.',
-        'Selve terapitimene foregår på en egen, sikker plattform som overholder europeiske personvernregler (GDPR). Behandling av helseopplysninger i forbindelse med terapien reguleres i egen avtale og journal, og omfattes ikke av denne erklæringen.',
+        'Vi behandler bare de opplysningene du selv gir oss, og kun til det formålet de er samlet inn for. Det er frivillig å ta kontakt med oss.',
+        'Kontaktskjema: Når du sender en henvendelse via skjemaet på nettsiden, behandler vi navnet ditt, e-postadressen din og innholdet i meldingen. Vi bruker opplysningene til å svare på henvendelsen og eventuelt avtale en time. Behandlingsgrunnlaget er vår berettigede interesse i å kunne besvare henvendelser (personvernforordningen art. 6 nr. 1 bokstav f), og tiltak før avtaleinngåelse dersom henvendelsen gjelder et mulig kundeforhold (art. 6 nr. 1 bokstav b).',
+        'Du bestemmer selv hva du skriver i meldingen. Vi oppfordrer deg til ikke å oppgi sensitive helseopplysninger i skjemaet. Det holder å beskrive kort hva du ønsker hjelp med, så tar vi det videre på en trygg måte.',
+        'E-post og telefon: Tar du kontakt på e-post eller telefon, behandler vi kontaktopplysningene dine og det du formidler, på samme grunnlag, for å svare deg og følge opp.',
+        'Vi bruker ikke opplysningene til automatiske avgjørelser eller profilering.',
       ],
     },
     {
-      heading: 'Formål og behandlingsgrunnlag',
+      heading: 'Informasjonskapsler og eksternt innhold',
       paragraphs: [
-        'Vi bruker opplysningene fra kontaktskjemaet utelukkende til å svare på henvendelsen din og eventuelt avtale en time. Behandlingsgrunnlaget er ditt samtykke og vår berettigede interesse i å besvare henvendelser, jf. personvernforordningen artikkel 6.',
+        'Denne nettsiden bruker ikke informasjonskapsler (cookies) til sporing, statistikk eller markedsføring. Derfor har vi heller ingen samtykkeløsning for slikt.',
+        'For skrifttypene på siden lastes Google Fonts inn fra Googles servere. Når nettleseren din henter skriftene, sendes IP-adressen din til Google. Ønsker du å unngå dette, kan du blokkere eksterne skrifter i nettleseren din.',
       ],
     },
     {
-      heading: 'Lagring og sletting',
+      heading: 'Hvem vi deler opplysninger med',
       paragraphs: [
-        'Henvendelser lagres kun så lenge det er nødvendig for å følge opp kontakten, og slettes når de ikke lenger er nødvendige. Vi deler ikke opplysningene dine med uvedkommende.',
+        'Vi selger aldri personopplysninger, og vi deler dem ikke med uvedkommende. Vi bruker noen eksterne leverandører (databehandlere) som behandler opplysninger på våre vegne, etter databehandleravtale og kun etter våre instrukser:',
+      ],
+      bullets: [
+        'Netlify: drift av nettsiden og lagring av innsendte skjemaer.',
+        'Titan: leverandøren av e-posten vår, dersom vi svarer deg på e-post.',
+        'Google: levering av skrifttyper (Google Fonts), som beskrevet over.',
       ],
     },
     {
-      heading: 'Databehandlere',
+      heading: 'Overføring til land utenfor EØS',
       paragraphs: [
-        'Nettsiden driftes hos Netlify, som på våre vegne lagrer skjemaer som sendes inn. E-post håndteres av vår e-postleverandør. Disse opptrer som databehandlere og behandler kun opplysninger etter våre instrukser.',
+        'Noen av leverandørene våre, blant annet Netlify og Google, er etablert i USA, og opplysninger kan derfor bli behandlet utenfor EØS. Slik overføring skjer på grunnlag av EUs standard personvernbestemmelser (SCC) og eventuelle tilleggsgarantier, slik at opplysningene dine er beskyttet på et nivå som tilsvarer det europeiske.',
       ],
     },
     {
-      heading: 'Informasjonskapsler (cookies)',
+      heading: 'Hvor lenge vi lagrer opplysningene',
       paragraphs: [
-        'Denne nettsiden bruker ikke informasjonskapsler til sporing eller analyse. For utseendet lastes skrifttyper inn fra Google Fonts; ved dette overføres IP-adressen din til Google. Ønsker du å unngå dette, kan du blokkere eksterne skrifter i nettleseren din.',
+        'Henvendelser via kontaktskjemaet slettes senest 12 måneder etter siste kontakt, med mindre henvendelsen fører til et kundeforhold og opplysningene må beholdes lenger for å følge det opp.',
+        'E-post og annen korrespondanse slettes når den ikke lenger er nødvendig for å følge opp kontakten.',
       ],
     },
     {
       heading: 'Dine rettigheter',
-      paragraphs: [
-        'Du har rett til innsyn i, retting av og sletting av personopplysningene vi har om deg. Du kan også be om begrensning av behandlingen og protestere mot den. Ta kontakt med oss for å bruke rettighetene dine.',
-        'Mener du at vi behandler opplysningene dine i strid med regelverket, har du rett til å klage til Datatilsynet.',
+      paragraphs: ['Når vi behandler personopplysninger om deg, har du følgende rettigheter:'],
+      bullets: [
+        'Innsyn: du kan få vite hvilke opplysninger vi har om deg, og få kopi av dem.',
+        'Retting: du kan få rettet opplysninger som er feil eller ufullstendige.',
+        'Sletting: du kan be om at opplysninger om deg slettes.',
+        'Begrensning: du kan be om at behandlingen begrenses.',
+        'Dataportabilitet: du kan i visse tilfeller få utlevert opplysningene dine i et maskinlesbart format.',
+        'Innsigelse: du kan protestere mot behandling som bygger på berettiget interesse.',
       ],
     },
     {
-      heading: 'Endringer',
+      heading: 'Klage til Datatilsynet',
       paragraphs: [
-        'Vi kan oppdatere denne personvernerklæringen ved behov. Den til enhver tid gjeldende versjonen er tilgjengelig på denne siden.',
+        'Mener du at vi behandler personopplysningene dine i strid med regelverket, kan du klage til Datatilsynet. Vi setter pris på om du tar kontakt med oss først, slik at vi kan rette opp eventuelle feil.',
+        'Datatilsynet: e-post postkasse@datatilsynet.no, Postboks 458 Sentrum, 0105 Oslo. Du finner mer informasjon på datatilsynet.no.',
+      ],
+    },
+    {
+      heading: 'Hva erklæringen ikke dekker',
+      paragraphs: [
+        'Denne erklæringen gjelder nettsiden og henvendelser til oss. Personopplysninger og helseopplysninger som behandles i forbindelse med selve terapien, håndteres separat etter helselovgivningen og reglene om journalføring, utenfor denne nettsiden.',
+      ],
+    },
+    {
+      heading: 'Endringer i personvernerklæringen',
+      paragraphs: [
+        'Vi kan oppdatere denne personvernerklæringen ved behov, for eksempel ved endringer i tjenestene våre eller i regelverket. Den til enhver tid gjeldende versjonen ligger på denne siden, med oppdatert dato øverst.',
       ],
     },
   ],
