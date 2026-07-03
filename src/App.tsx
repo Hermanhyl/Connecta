@@ -31,7 +31,7 @@ function AnimatedRoutes() {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="pt-[86px] sm:pt-[98px]"
+        className="pt-[5.375rem] sm:pt-[6.125rem]"
       >
         <Suspense fallback={<Loading />}>
           <Routes location={location}>

@@ -53,7 +53,12 @@ fine print. Don't drop content below 16px just to fit — adjust layout instead.
 - Page width: `.container-content` = `max-w-content` (72rem) with `px-5 sm:px-8`.
 - Section vertical rhythm: `py-12` to `py-16`.
 - Mobile-first: stack with base classes, expand at `sm:` / `md:` / `lg:`.
-- Standard breakpoints to verify: **375 / 768 / 1024 / 1440**.
+- Standard breakpoints to verify: **375 / 768 / 1024 / 1440 / 2560**.
+- **Large-display scaling:** the root `font-size` steps up at `1680 / 1920 / 2560 / 3200px`
+  (16 → 17 → 18.5 → 21 → 23px)
+  (see `index.css`), so all rem-based text, spacing, and `max-w-content` grow
+  proportionally on big/4K screens. Keep sizing in rem/Tailwind units (not fixed `px`)
+  so it scales with this; the fixed header offset in `App.tsx` uses rem for that reason.
 
 ## 4. Radius, shadows, borders
 

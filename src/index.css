@@ -14,7 +14,8 @@
   body {
     @apply bg-clinic-bg font-body text-clinic-ink antialiased;
     margin: 0;
-    font-size: 16px;
+    /* 1rem (not a fixed 16px) so body text scales with the root on large screens. */
+    font-size: 1rem;
   }
 
   h1,
@@ -117,5 +118,30 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Large-display scaling: bump the root font size so all rem-based sizing
+   (text, spacing, and the max-w-content container) grows proportionally.
+   This makes text and cards noticeably larger and more legible on big/4K
+   screens without touching laptops (≤1600px stay at the 16px base). */
+@media (min-width: 1680px) {
+  html {
+    font-size: 17px; /* large laptops / small desktops: gentle +6% */
+  }
+}
+@media (min-width: 1920px) {
+  html {
+    font-size: 18.5px; /* 1080p+ desktop: clearly larger, +16% */
+  }
+}
+@media (min-width: 2560px) {
+  html {
+    font-size: 21px; /* 1440p / QHD: +31% */
+  }
+}
+@media (min-width: 3200px) {
+  html {
+    font-size: 23px; /* 4K and up: +44% */
   }
 }
