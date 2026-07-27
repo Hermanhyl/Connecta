@@ -1,24 +1,24 @@
-import { lazy, Suspense } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion, MotionConfig, useReducedMotion } from 'framer-motion'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { ScrollToTop } from './components/ScrollToTop'
 import { ErrorBoundary } from './components/ErrorBoundary'
-import { Loading } from './components/Loading'
 import { pageTransition } from './lib/motion'
 
-// Lazy-load routes so each page is its own chunk (smaller initial load).
-const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })))
-const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })))
-const Services = lazy(() => import('./pages/Services').then((m) => ({ default: m.Services })))
-const Method = lazy(() => import('./pages/Method').then((m) => ({ default: m.Method })))
-const Pricing = lazy(() => import('./pages/Pricing').then((m) => ({ default: m.Pricing })))
-const Blog = lazy(() => import('./pages/Blog').then((m) => ({ default: m.Blog })))
-const BlogPost = lazy(() => import('./pages/BlogPost').then((m) => ({ default: m.BlogPost })))
-const Contact = lazy(() => import('./pages/Contact').then((m) => ({ default: m.Contact })))
-const Privacy = lazy(() => import('./pages/Privacy').then((m) => ({ default: m.Privacy })))
-const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })))
+// Pages are imported directly (not React.lazy): the app is prerendered to static
+// HTML at build time via renderToString, which cannot resolve lazy() boundaries,
+// and the client must hydrate the identical tree. See scripts/prerender.mjs.
+import { Home } from './pages/Home'
+import { About } from './pages/About'
+import { Services } from './pages/Services'
+import { Method } from './pages/Method'
+import { Pricing } from './pages/Pricing'
+import { Blog } from './pages/Blog'
+import { BlogPost } from './pages/BlogPost'
+import { Contact } from './pages/Contact'
+import { Privacy } from './pages/Privacy'
+import { NotFound } from './pages/NotFound'
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -33,20 +33,18 @@ function AnimatedRoutes() {
         exit="exit"
         className="pt-[5.375rem] sm:pt-[6.125rem]"
       >
-        <Suspense fallback={<Loading />}>
-          <Routes location={location}>
-            <Route path="/" element={<Home />} />
-            <Route path="/om-oss" element={<About />} />
-            <Route path="/tjenester" element={<Services />} />
-            <Route path="/behandlingsmetode" element={<Method />} />
-            <Route path="/priser" element={<Pricing />} />
-            <Route path="/blogg" element={<Blog />} />
-            <Route path="/blogg/:slug" element={<BlogPost />} />
-            <Route path="/kontakt" element={<Contact />} />
-            <Route path="/personvern" element={<Privacy />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/om-oss" element={<About />} />
+          <Route path="/tjenester" element={<Services />} />
+          <Route path="/behandlingsmetode" element={<Method />} />
+          <Route path="/priser" element={<Pricing />} />
+          <Route path="/blogg" element={<Blog />} />
+          <Route path="/blogg/:slug" element={<BlogPost />} />
+          <Route path="/kontakt" element={<Contact />} />
+          <Route path="/personvern" element={<Privacy />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </motion.main>
     </AnimatePresence>
   )

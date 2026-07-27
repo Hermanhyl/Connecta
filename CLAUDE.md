@@ -87,17 +87,35 @@ Routes: `/` `·` `/om-oss` `·` `/tjenester` `·` `/behandlingsmetode` `·` `/pr
   (`angstsymptomer`, `terapipakke`), `bl.a.` not `bla.`, `å` vs `og` care.
 - **Testimonials are real client quotes** — do not silently reword them. Flag issues and ask.
 
+## Rendering & SEO (prerendering)
+
+The app is a client SPA that is **prerendered to static HTML at build time** so
+search engines and first paint get real content, not an empty `<div id="root">`.
+
+- `npm run build` runs: `tsc -b` → `vite build` (client) → `vite build --ssr`
+  (server bundle to `dist-server/`) → `node scripts/prerender.mjs`.
+- `scripts/prerender.mjs` renders each route with `renderToString` + react-router's
+  `StaticRouter` and writes one HTML file per route (`dist/index.html`,
+  `dist/om-oss/index.html`, …), injecting per-route `<head>` (title, description,
+  canonical, OG, JSON-LD) from `src/lib/head.ts`.
+- The route list comes from `entry-server.ts`'s `prerenderPaths`: **static routes
+  from the `seo` map** in `src/data/site.ts` + **blog posts from `posts`**. So when
+  you add a route in `App.tsx`, add it to the `seo` map or it won't be prerendered.
+- Client hydrates (`hydrateRoot`) in prod and mounts fresh (`createRoot`) in dev —
+  see `src/entry-client.tsx`. Pages are imported directly (NOT `React.lazy`):
+  `renderToString` can't resolve lazy boundaries and the client must hydrate the
+  identical tree. Keep them direct-imported.
+- Per-route structured data is emitted both statically (prerender) and at runtime
+  (`<Seo jsonLd={…}>`), built by `src/lib/schema.ts`.
+
 ## Deployment (Netlify)
 
 - `netlify.toml` sets `build = npm run build`, `publish = dist`.
-- Routing lives only in `public/_redirects` (Netlify processes it before `netlify.toml`).
-  It is a route allowlist: valid app routes rewrite to `/index.html` with `200` (so deep
-  links like `/om-oss` work; Netlify matches trailing slashes insensitively, so `/om-oss/`
-  is covered too), and everything else rewrites to `/index.html` with a real `404` (so
-  stale/old URLs return 404 and search engines drop them). When you add a new route in
-  `App.tsx`, add a matching `200` line to `_redirects` or it will 404. Do NOT add a
-  `/route/ → /route 301` rule: Netlify's slash-insensitive matching turns it into a
-  redirect loop on `/route`.
+- Routing needs **no `_redirects` rewrites**: every valid route is a real prerendered
+  HTML file that Netlify serves directly. Unknown paths fall through to
+  `dist/404.html` (the prerendered NotFound page), which Netlify serves automatically
+  with a real 404 status so search engines drop stale URLs. `public/_redirects` is
+  now just documentation.
 
 ## Git / commits
 
