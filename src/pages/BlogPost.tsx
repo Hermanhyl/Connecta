@@ -5,6 +5,7 @@ import { Section, Reveal } from '../components/Section'
 import { Blobs } from '../components/Decor'
 import { AnimatedButton } from '../components/AnimatedButton'
 import { Seo } from '../components/Seo'
+import { blogPostingSchema } from '../lib/schema'
 
 /** Build a URL-safe id from a Norwegian heading for in-page anchors. */
 function slugify(s: string): string {
@@ -51,6 +52,7 @@ export function BlogPost() {
         title={`${post.title} – ${site.name}`}
         description={post.excerpt}
         path={`/blogg/${post.slug}`}
+        jsonLd={blogPostingSchema(post)}
       />
       <section className="relative overflow-hidden pb-4">
         <Blobs />

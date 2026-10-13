@@ -2,8 +2,15 @@
   command = "npm run build"
   publish = "dist"
 
-# Routing (SPA rewrites + real 404 for stale URLs) lives in public/_redirects,
-# which Netlify processes first. Keeping it in one place avoids conflicting rules.
+# Pin the Node version so the build matches local/CI and satisfies Vite 8
+# (needs Node >= 20.19 / 22.12). Without this, Netlify's default image Node
+# could drift and break the build.
+[build.environment]
+  NODE_VERSION = "22"
+
+# Routing is prerendered: `npm run build` emits one real HTML file per route,
+# so no SPA rewrites are needed. Unknown paths fall through to the prerendered
+# dist/404.html (served automatically with a 404). See public/_redirects.
 
 # Security headers applied to every response
 [[headers]]

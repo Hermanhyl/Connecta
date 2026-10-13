@@ -11,6 +11,7 @@ import { TestimonialCarousel } from '../components/TestimonialCarousel'
 import { FAQAccordion } from '../components/FAQAccordion'
 import { CallToAction } from '../components/CallToAction'
 import { fadeUp, stagger } from '../lib/motion'
+import { faqPageSchema } from '../lib/schema'
 
 const titleWords = home.heroTitle.split(' ')
 
@@ -23,7 +24,12 @@ const highlights = [
 export function Home() {
   return (
     <>
-      <Seo title={seo['/'].title} description={seo['/'].description} path="/" />
+      <Seo
+        title={seo['/'].title}
+        description={seo['/'].description}
+        path="/"
+        jsonLd={faqPageSchema(faq)}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden">
         <Blobs />

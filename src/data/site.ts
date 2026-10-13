@@ -334,9 +334,9 @@ export const pricing = {
     {
       name: 'Kjersti',
       rows: [
-        { label: 'Individualterapi 60 minutter', price: '900,-' },
-        { label: 'Familieveiledning 60 minutter', price: '900,-' },
-        { label: 'Familieveiledning 90 minutter', price: '1350,-' },
+        { label: 'Individualterapi 60 minutter', price: '950,-' },
+        { label: 'Familieveiledning 60 minutter', price: '950,-' },
+        { label: 'Familieveiledning 90 minutter', price: '1425,-' },
       ],
     },
     {
@@ -353,8 +353,8 @@ export const pricing = {
     {
       name: 'Kjersti',
       tiers: [
-        { duration: '60 minutter', single: '900,-', rows: [{ label: '4 avtaler', price: '3.300,-' }, { label: '8 avtaler', price: '6.900,-' }] },
-        { duration: '90 minutter', single: '1.350,-', rows: [{ label: '4 avtaler', price: '5.100,-' }, { label: '8 avtaler', price: '10.500,-' }] },
+        { duration: '60 minutter', single: '950,-', rows: [{ label: '4 avtaler', price: '3.500,-' }, { label: '8 avtaler', price: '7.200,-' }] },
+        { duration: '90 minutter', single: '1.425,-', rows: [{ label: '4 avtaler', price: '5.400,-' }, { label: '8 avtaler', price: '11.000,-' }] },
       ],
     },
     {
