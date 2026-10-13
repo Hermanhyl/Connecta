@@ -17,10 +17,12 @@ export function Header() {
 
   useMotionValueEvent(scrollY, 'change', (y) => setScrolled(y > 24))
 
-  // Close mobile drawer on route change
-  useEffect(() => {
+  // Close mobile drawer on route change (adjust state during render, not in an effect)
+  const [prevPath, setPrevPath] = useState(location.pathname)
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname)
     setOpen(false)
-  }, [location.pathname])
+  }
 
   // Lock body scroll when the drawer is open
   useEffect(() => {
